@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teknologiforståelse</title>
+  <meta name="description" content="Ressursside for faget Teknologiforståelse (VG1 IKM)." />
+  <style>
+    :root{
+      --bg:#0b3b2e;
+      --card:#0f4d3c;
+      --ink:#f6f6f6;
+      --muted:#cde7df;
+      --accent:#8ef0c7;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#07251d, #0e3a2e 40%, #0a2d24);color:var(--ink)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px,92%);margin:auto}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(10,45,36,.8);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:.7rem;align-items:center;font-weight:700;letter-spacing:.3px}
+    .brand .badge{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--accent);color:#053326;font-weight:900}
+    .links{display:flex;gap:1rem;flex-wrap:wrap}
+    .links a{padding:8px 12px;border-radius:10px}
+    .links a:hover{background:rgba(255,255,255,.06)}
+
+    /* Hero */
+    .hero{padding:56px 0 30px}
+    .hero h1{font-size:clamp(28px,5vw,44px);margin:0 0 10px}
+    .hero p{color:var(--muted);max-width:60ch;line-height:1.6}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:18px}
+    .tag{border:1px solid rgba(255,255,255,.15);padding:6px 10px;border-radius:999px;font-size:.9rem;color:var(--muted)}
+
+    /* Sections */
+    section{padding:32px 0}
+    h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 14px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin-top:0}
+    .list{margin:0;padding-left:18px}
+    .note{font-size:.95rem;color:var(--muted)}
+
+    /* Table */
+    table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    thead th{background:rgba(255,255,255,.06);text-align:left;padding:12px}
+    td{padding:12px;border-top:1px solid rgba(255,255,255,.07)}
+
+    /* Footer */
+    footer{padding:40px 0 60px;color:var(--muted);text-align:center}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .spacer{height:22px}
+    .btn{display:inline-block;background:var(--accent);color:#053326;font-weight:700;padding:10px 14px;border-radius:12px}
+    .btn:hover{text-decoration:none;filter:brightness(.95)}
+
+    /* Back to top */
+    #topbtn{position:fixed;right:18px;bottom:18px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.12);color:var(--ink);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);display:none}
+
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f5fff9; --ink:#10231d; --muted:#305a4e }
+    }
+  </style>
+</head>
+<body>
+  <a id="top"></a>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="badge">TF</span> Teknologiforståelse</div>
+      <nav class="links" aria-label="Hovedmeny">
+        <a href="#om">Om faget</a>
+        <a href="#kompetanse">Kompetansemål</a>
+        <a href="#tema">Tema</a>
+        <a href="#oppgaver">Oppgaver</a>
+        <a href="#vurdering">Vurdering</a>
+        <a href="#ressurser">Ressurser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Teknologiforståelse (VG1 IKM)</h1>
+      <p>På denne siden finner du en oversikt over faget, tydelige mål, praktiske aktiviteter og nyttige lenker. Alt er lagt opp for at du som elev skal lære, skape og tenke kritisk rundt teknologi i hverdagen.</p>
+      <div class="tags" aria-label="stikkord">
+        <span class="tag">Personvern</span>
+        <span class="tag">Algoritmer</span>
+        <span class="tag">Informasjonssikkerhet</span>
+        <span class="tag">Bærekraft</span>
+        <span class="tag">Etikk</span>
+      </div>
+    </section>
+
+    <section id="om">
+      <h2>Om faget</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Hvorfor teknologiforståelse?</h3>
+          <p>Teknologi påvirker hvordan vi lærer, jobber og kommuniserer. Faget trener deg i å forstå hvordan teknologier virker, hvilke konsekvenser de har og hvordan du kan bruke dem trygt og ansvarlig.</p>
+        </article>
+        <article class="card">
+          <h3>Arbeidsformer</h3>
+          <ul class="list">
+            <li>Utforskende oppgaver og kasus (case).</li>
+            <li>Mini-labs: datasikkerhet, kryptering, algoritmer.</li>
+            <li>Prosjektarbeid i grupper med presentasjon.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Verktøy</h3>
+          <ul class="list">
+            <li>Office 365 / Google Workspace</li>
+            <li>Canva / Figma (visualisering)</li>
+            <li>Python / Scratch (enkle algoritmer)</li>
+            <li>Nettsikkerhetsverktøy (passordtest, 2FA)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="kompetanse">
+      <h2>Kompetansemål (utdrag)</h2>
+      <p class="note">Tilpass til skolens lokale plan.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Personvern og regelverk</h3>
+          <p>Gjøre rede for hvordan informasjon og personopplysninger behandles i tråd med gjeldende regelverk (GDPR) og skolens rutiner.</p>
+        </div>
+        <div class="card">
+          <h3>Bærekraft</h3>
+          <p>Forklare hvordan anskaffelse, drift og avhending av utstyr påvirker miljøet, og foreslå bærekraftige valg.</p>
+        </div>
+        <div class="card">
+          <h3>Kvalitet og anbefaling</h3>
+          <p>Vurdere, anbefale og kvalitetssikre digitale tjenester basert på behov, sikkerhet og etikk.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tema">
+      <h2>Tema og nøkkelbegreper</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Algoritmer & data</h3>
+          <ul class="list">
+            <li>Hva er en algoritme? Flows og beslutninger</li>
+            <li>Datasett, feilkilder og bias</li>
+            <li>Maskinlæring – helt grunnleggende idé</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Informasjonssikkerhet</h3>
+          <ul class="list">
+            <li>Passord, 2FA, phishing</li>
+            <li>Kryptering på 5 minutter</li>
+            <li>Sikker deling og lagring</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Digital etikk</h3>
+          <ul class="list">
+            <li>Kildekritikk og kildebruk</li>
+            <li>AI-verktøy: muligheter og begrensninger</li>
+            <li>Rettigheter, opphavsrett og delingskultur</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Bærekraft & livssyklus</h3>
+          <ul class="list">
+            <li>Fra produksjon til gjenvinning</li>
+            <li>Energibruk i skyen</li>
+            <li>Praktiske forslag på skolen</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="oppgaver">
+      <h2>Eksempeloppgaver</h2>
+      <table aria-label="Oppgaver">
+        <thead>
+          <tr><th>Oppgave</th><th>Kort beskrivelse</th><th>Levering</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Passordsjekk & 2FA</td>
+            <td>Lag sterke passord, test dem og aktiver totrinnsbekreftelse. Refleksjon: Hvorfor hjelper dette?</td>
+            <td>Skjermbilde + refleksjon (½ side)</td>
+          </tr>
+          <tr>
+            <td>Algoritmisk tenking</td>
+            <td>Beskriv en hverdagsprosess som algoritme (flowchart). Diskuter svakheter.</td>
+            <td>PDF/PNG av flytskjema</td>
+          </tr>
+          <tr>
+            <td>Digitale fotavtrykk</td>
+            <td>Undersøk hvilke spor ulike apper samler inn. Foreslå personverninnstillinger.</td>
+            <td>Kort rapport (1–2 sider)</td>
+          </tr>
+          <tr>
+            <td>Grønn IT-tiltak</td>
+            <td>Kartlegg energibruk på egne enheter og foreslå tiltak for klassen/skolen.</td>
+            <td>Pitch (3 min) + plakat</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="spacer"></div>
+      <a class="btn" href="#" onclick="alert('Denne knappen kan kobles til skolens LMS for innlevering.');return false;">Lever i LMS</a>
+    </section>
+
+    <section id="vurdering">
+      <h2>Vurdering</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Kriterier (generelt)</h3>
+          <ul class="list">
+            <li>Faglig presisjon og begrepsbruk</li>
+            <li>Kritisk tenking og refleksjon</li>
+            <li>Praktisk anvendelse og problemløsing</li>
+            <li>Etisk bevissthet og kildebruk</li>
+            <li>Samarbeid og kommunikasjon</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Egenvurdering</h3>
+          <p>Eleven fyller ut en kort egenvurdering per oppgave: Hva lærte jeg? Hva ville jeg gjort annerledes?</p>
+        </div>
+        <div class="card">
+          <h3>Underveisvurdering</h3>
+          <p>Læreren gir tilbakemelding med fokus på måloppnåelse og neste steg. Små forbedringsmål dokumenteres i LMS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ressurser">
+      <h2>Ressurser</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Veiledere</h3>
+          <ul class="list">
+            <li>GDPR i skolen – kort innføring</li>
+            <li>Sikre passord og 2FA</li>
+            <li>Nettvett for elever</li>
+          </ul>
+          <p class="note">Legg inn skolens/lærerens egne lenker her.</p>
+        </div>
+        <div class="card">
+          <h3>Maler</h3>
+          <ul class="list">
+            <li>Flowchart-mal (PNG/PDF)</li>
+            <li>Rapportmal (DOCX/Google Docs)</li>
+            <li>Presentasjonsmal (PPT/Slides)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Til foreldre/foresatte</h3>
+          <p>Hvordan støtte elevene i god, trygg og bærekraftig teknologi-bruk hjemme.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Teknologiforståelse • Laget for klasser i videregående skole.</p>
+      <p class="muted">Tilpasninger: legg inn skolens logo/farger, lokale planer og lenker.</p>
+      <p><a href="#top">Til toppen ↑</a></p>
+    </div>
+  </footer>
+
+  <button id="topbtn" aria-label="Til toppen" title="Til toppen" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    // årstall
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // vis tilbake-til-toppen-knapp etter scroll
+    const topbtn = document.getElementById('topbtn');
+    window.addEventListener('scroll', () => {
+      topbtn.style.display = (window.scrollY > 500) ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
