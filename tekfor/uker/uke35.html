@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teknologiforståelse – Uke 35</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./files/style.css" />
+    
+  
+</head>
+<body>
+  <div class="app">
+    <nav>
+      <div class="back"><a href="../tekfor.html">← Tilbake</a></div>
+
+      <h2>Uker</h2>
+      <ul>
+        <li><a href="uke33.html">Uke 33</a></li>
+        <li><a href="uke34.html">Uke 34</a></li>
+        <li><a class="active" href="uke35.html">Uke 35</a></li>
+        <li><a href="uke36.html">Uke 36</a></li>
+        <!-- flere uker -->
+      </ul>
+    </nav>
+
+  <main>
+    <div class="wrap">
+      <h1 class="page-title">Uke 35 - Analogt og digitalt</h1>
+      <div class="card">    
+      <div class="tag"></div>
+      <div class="tag"></div>
+      <div class="tag"></div>
+      <div class="tag"></div>
+
+      
+          <!-- 1: Intro -->
+          <section class="section">
+            <div>
+              <h1>Analog vs. digital</h1>
+              <p><strong>Analog</strong> = kontinuerlig bølge (uendelig mange mellomverdier).<br>
+             <strong>Digital</strong> = trinnvis representasjon i tall (0/1).</p>
+          <ul class="list-tight">
+            <li>Eksempler analogt: platespiller/LP, FM-radio, kvikksølv-termometer, viserk lokke.</li>
+            <li>Eksempler digitalt: mobil/PC, streaming, digitalt kamera, smartklokke.</li>
+          </ul>
+              <div>
+                <span class="pill">Analoge signaler</span>
+                <span class="pill">Digitalisering</span>
+              </div>
+            </div>
+            <figure>
+              <img src="./files/ana-dig.png" alt="Illustrasjon av ulike teknologier i hverdagen">
+              <figcaption>Analog&Digital</figcaption>
+            </figure>
+          </section>
+<section class="section">
+    <div>
+    <h1>Analoge signaler & kvalitet</h1>
+    <p>Signaler bærer informasjon via variasjoner i <em>et medium</em> (luft, kobber, lys i fiber, radio).</p>
+          <ul class="list-tight">
+            <li><strong>Sansene er analoge:</strong> lyd → trommehinne → sneglehus → nerveimpulser.</li>
+            <li><strong>Kvalitetstap:</strong> hver analoge kopiering/overføring kan gi <em>støy</em> og <em>tap</em>.</li>
+            <li>Case: <span class="code">fonograf → voksrull</span> (helt analog prosess).</li>
+          </ul>
+        </div>
+        <figure>
+          
+          <img src="./files/analogsignal.png">
+          <figcaption>Analoge Signaler</figcaption>
+        </figure>
+      
+    
+</section>
+      
+
+      
+          
+
+      <div class="card callout">
+        <strong>Miniaktivitet:</strong> Finn 5 analoge og 5 digitale teknologier fra hverdagen. Skriv i par og del i plenum.
+      </div>
+
+      <h2>3) Digitalisering (sampling & kvantisering)</h2>
+      <div class="row">
+        <div class="col">
+          <p><strong>Digitalisering</strong> = gjøre analogt om til tall (0/1) ved å måle jevne mellomrom (sampling) og runde av til nærmeste nivå (kvantisering).</p>
+          <ul class="list-tight">
+            <li><strong>Samplerate:</strong> hvor ofte vi måler (f.eks. lyd 48 kHz).</li>
+            <li><strong>Bitdybde:</strong> hvor fin skalaen er per måling (f.eks. 24-bit).</li>
+            <li>Høyere samplerate/bitdybde → bedre kvalitet, større fil.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <!-- Değiştir: ./img/analog-wave-sampled.jpg -->
+          <div class="img" style="background-image:url('./img/placeholder-sampling-bars.jpg')" aria-label="Analog bølge og digitale stolper"></div>
+          <p class="note">Bildeplassholder – bølge (analog) vs stolper (digital).</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>Aktivitet:</strong> “Tall-finnern” – Hvilke fenomener gjør vi om til tall?
+        <ul class="list-tight">
+          <li>Skritt (skritteller), puls (BPM), fart (km/t), temperatur (°C), strømforbruk (kWh), karakterer/likes.</li>
+        </ul>
+      </div>
+
+      <h2>4) Tallsystemer (kort intro)</h2>
+      <div class="row">
+        <div class="col">
+          <ul class="list-tight">
+            <li><strong>Desimalt</strong> (base 10): 0–9</li>
+            <li><strong>Binært</strong> (base 2): 0–1 → maskiners “språk”.</li>
+            <li><strong>Heksadesimalt</strong> (base 16): 0–9 + A–F (kortere for oss mennesker; f.eks. farger, MAC/IPv6).</li>
+          </ul>
+          <p class="note">Eksempel: binært <span class="code">101000</span> = desimal <span class="code">40</span> ( = 2⁵ + 2³).</p>
+        </div>
+        <div class="col">
+          <!-- Değiştir: ./img/binary-hex.jpg -->
+          <div class="img" style="background-image:url('./img/placeholder-binary-hex.jpg')" aria-label="Binært og heksadesimalt eksempel"></div>
+          <p class="note">Bildeplassholder – binær/hex-tabell.</p>
+        </div>
+      </div>
+
+      <div class="card quiz">
+        <strong>Mikro-quiz (munnlig):</strong>
+        <ol>
+          <li>Er <em>viserk lokke</em> analog eller digital? Hvorfor?</li>
+          <li>Hva betyr “48 kHz samplerate” i lyd?</li>
+          <li>Gi ett eksempel på heksadesimalt du har sett i praksis.</li>
+        </ol>
+      </div>
+
+      <h2>5) Bit & byte + prefiks (superkort)</h2>
+      <div class="row">
+        <div class="col">
+          <ul class="list-tight">
+            <li><strong>bit</strong> (b) = 0/1, <strong>byte</strong> (B) = 8 bit.</li>
+            <li><strong>SI-prefiks</strong> (×1000): kB, MB, GB, TB (lagring/overføring).</li>
+            <li><strong>Binære prefiks</strong> (×1024): KiB, MiB, GiB (ofte i OS).</li>
+            <li>Typisk “forskjell”: 500 GB (produsent) ≈ 465 GiB (Windows).</li>
+          </ul>
+        </div>
+        <div class="col">
+          <!-- Değiştir: ./img/bit-byte-icons.jpg -->
+          <div class="img" style="background-image:url('./img/placeholder-bit-byte.jpg')" aria-label="Bit/byte og prefiks ikoner"></div>
+          <p class="note">Bildeplassholder – 0/1, ASCII ‘A’, kB/MB/GB ikonları.</p>
+        </div>
+      </div>
+
+      <h2>Oppgaver / innlevering (Teams)</h2>
+      <div class="card">
+        <ul class="list-tight">
+          <li><strong>Oppgave 1:</strong> 5 analoge + 5 digitale eksempler fra hverdagen (kort forklaring).</li>
+          <li><strong>Oppgave 2:</strong> Tegn 4×4 pikselrutenett. Fyll med svart/hvitt og skriv linjene som 0/1.</li>
+          <li><strong>Oppgave 3 (frivillig):</strong> Binært → heks (f.eks. <span class="code">1010</span>, <span class="code">1111</span> → ?)</li>
+        </ul>
+      </div>
+
+      <!-- İstersen PDF gömme: analog-digital notları -->
+      <iframe class="embed" src="./files/analog-digitalt.pdf" title="Analogt og digitalt – Notater (PDF)"></iframe>
+    </div></div>
+  </main>
+</div>
+</body>
+</html>

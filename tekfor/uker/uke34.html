@@ -1,57 +1,144 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <title>Teknologiforståelse – Uke 33</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        .container { display: flex; height: 100vh; }
-        nav {
-            width: 220px; background-color: #2c3e50; color: white; padding: 20px; box-sizing: border-box;
-        }
-        nav h2 {
-            font-size: 18px; margin-top: 0; border-bottom: 1px solid #7f8c8d; padding-bottom: 5px;
-        }
-        nav ul { list-style: none; padding: 0; margin: 0; }
-        nav ul li { margin: 8px 0; }
-        nav ul li a { color: white; text-decoration: none; }
-        nav ul li a:hover { text-decoration: underline; }
-        main {
-            flex: 1; padding: 20px; background-color: #ecf0f1;
-        }
-        .content {
-            background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        .content h1 { margin-top: 0; color: #2c3e50; }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 10px;
-            color: #2980b9;
-            text-decoration: none;
-        }
-        .back-link:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Teknologiforståelse – Uke 34</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./files/style.css" />
+    
+  
 </head>
 <body>
-
-<div class="container">
+  <div class="app">
     <nav>
-        <h2><a href="../tekfor.html" style="color:white; text-decoration:none;">← Tilbake</a></h2>
-        <h2>Uker</h2>
-        <ul>
-            <li><a href="uke33.html">Uke 33</a></li>
-            <li><a href="uke34.html">Uke 34</a></li>
-            <!-- Andre uker -->
-        </ul>
+      <div class="back"><a href="../tekfor.html">← Tilbake</a></div>
+
+      <h2>Uker</h2>
+      <ul>
+        <li><a href="uke33.html">Uke 33</a></li>
+        <li><a class="active" href="uke34.html">Uke 34</a></li>
+        <li><a href="uke35.html">Uke 35</a></li>
+        <li><a href="uke36.html">Uke 36</a></li>
+        <!-- flere uker -->
+      </ul>
     </nav>
 
     <main>
-        <div class="content">
-            <h1>Uke 34 – Teknologiforståelse</h1>
-            <p>Her kommer innholdet for uke 34 i Teknologiforståelse.</p>
-        </div>
-    </main>
-</div>
+      <div class="wrap">
+        <h1 class="page-title">Uke 34 – Teknologiforståelse</h1>
+        <div class="card">
 
+          <!-- 1: Intro -->
+          <section class="section">
+            <div>
+              <h1>Digital teknologi</h1>
+              <p>Teknologi er alt vi lager for å løse problemer og gjøre livet enklere. Den påvirker samfunnet vårt hver dag.</p>
+              <div>
+                <span class="pill">kommunikasjon</span>
+                <span class="pill">skole & arbeid</span>
+                <span class="pill">underholdning</span>
+                <span class="pill">demokrati</span>
+              </div>
+            </div>
+            <figure>
+              <img src="./files/teknologi.jpg" alt="Illustrasjon av ulike teknologier i hverdagen">
+              <figcaption>Teknologi i hverdagen</figcaption>
+            </figure>
+          </section>
+
+          <!-- 2: Historie -->
+          <section class="section section--flip">
+            <div>
+              <h2>Historisk utvikling</h2>
+              <ul>
+                <li>Fra mekanisk/analog (platespiller, kassett, VHS) til digital og nettbasert.</li>
+                <li>Digitalt = lett å kopiere/lagre/søke, ofte uten kvalitetstap.</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./files/tek-historie.jpg" alt="Tidslinje fra analog til digital teknologi">
+              <figcaption>Fra analog til digital</figcaption>
+            </figure>
+          </section>
+
+          <!-- 3: Demokrati -->
+          <section class="section">
+            <div>
+              <h2>Tecnologi og demokrati</h2>
+              <p><strong>Muligheter:</strong> mer deltakelse, enkel kommunikasjon, tilgang til informasjon.</p>
+              <p><strong>Utfordringer:</strong> falske nyheter, ekkokamre, overvåking.</p>
+            </div>
+            <figure>
+              <img src="./files/tek-demokrati.jpg" alt="Ikoner som representerer deltakelse og informasjon">
+              <figcaption>Muligheter & utfordringer</figcaption>
+            </figure>
+          </section>
+
+          <!-- 4: Hva er digital -->
+          <section class="section section--flip">
+            <div>
+              <h2>Hva er digital teknologi?</h2>
+              <p>Informasjon lagres og behandles som 0 og 1 (binært). Eksempler: PC, mobil, nettbrett, internett, sosiale medier, roboter, sensorer.</p>
+              <p><em>Forskjell fra analog:</em> mer presis, rask, og kopier kan være identiske.</p>
+            </div>
+            <figure>
+              <img src="./files/dig-tek.jpg" alt="Analog bølge kontra digital sampling">
+              <figcaption>Analog vs. digital representasjon</figcaption>
+            </figure>
+          </section>
+
+          <!-- 5: Samfunn -->
+          <section class="section">
+            <div>
+              <h2>Digital teknologi i samfunnet</h2>
+              <ul>
+                <li><b>Kommunikasjon:</b> meldinger, videochat, deling på sekunder.</li>
+                <li><b>Skole/arbeid:</b> Teams, skylagring, digitale tavler.</li>
+                <li><b>Underholdning:</b> Netflix, Spotify, gaming, VR.</li>
+                <li><b>Demokrati:</b> enklere å delta, men risiko for feilinformasjon.</li>
+                <li><b>Hverdagsliv:</b> kart, nettbutikk, helseapper, e-resept.</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./files/dig-tek-samm.jpg" alt="Ikoner for kommunikasjon, skole, underholdning og tjenester">
+              <figcaption>Bruksområder i hverdagen</figcaption>
+            </figure>
+          </section>
+
+          <!-- 6: Analog vs Digital -->
+          <section class="section section--flip">
+            <div>
+              <h2>Analog vs. Digital</h2>
+              <p><b>Analog:</b> kontinuerlige signaler (lydbølger, platespiller).</p>
+              <p><b>Digital:</b> målepunkter/verdier i 0/1 som kan behandles av datamaskiner.</p>
+            </div>
+            <figure>
+              <img src="./files/ana-dig.png" alt="Sammenligning av analog kurve og digital søyle-graf">
+              <figcaption>Kontinuerlig vs. samplet</figcaption>
+            </figure>
+          </section>
+
+          <!-- 7: Datasystemer -->
+          <section class="section">
+            <div>
+              <h2>Datasystemer</h2>
+              <p>Datamaskinen samarbeider med <b>CPU</b> (beregninger), <b>RAM</b> (arbeidsminne), <b>lagring</b> (SSD/HDD) og inn/ut-enheter.</p>
+              <p>Målet er å behandle informasjon effektivt og pålitelig.</p>
+            </div>
+            <figure>
+              <img src="./files/datasystemer.jpg" alt="Skjematisk visning av CPU, RAM og lagring">
+              <figcaption>Samspillet mellom delene</figcaption>
+            </figure>
+          </section>
+
+          <!-- PDF -->
+          <div class="pdf" aria-label="Digital teknologi PDF">
+            <iframe src="./files/digital-teknologi.pdf" title="Digital Teknologi – PDF"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
