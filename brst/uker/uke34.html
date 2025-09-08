@@ -1,122 +1,118 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <title>Brukerstøtte – Uke 33</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
-        .container { display: flex; height: 100vh; }
-        nav {
-            width: 220px; background-color: #2c3e50; color: white; padding: 20px; box-sizing: border-box;
-        }
-        nav h2 {
-            font-size: 18px; margin-top: 0; border-bottom: 1px solid #7f8c8d; padding-bottom: 5px;
-        }
-        nav ul { list-style: none; padding: 0; margin: 0; }
-        nav ul li { margin: 8px 0; }
-        nav ul li a { color: white; text-decoration: none; }
-        nav ul li a:hover { text-decoration: underline; }
-        main {
-            flex: 1; padding: 20px; background-color: #ecf0f1;
-        }
-        .content {
-            background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        .content h1 { margin-top: 0; color: #2c3e50; }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 10px;
-            color: #2980b9;
-            text-decoration: none;
-        }
-        .back-link:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Brukerstøtte – Uke 34</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./files/style.css" />
 </head>
 <body>
-
-<div class="container">
+  <div class="app">
     <nav>
-        <h2><a href="../brst.html" style="color:white; text-decoration:none;">← Tilbake</a></h2>
-        <h2>Uker</h2>
-        <ul>
-            <li><a href="uke33.html">Uke 33</a></li>
-            <li><a href="uke34.html">Uke 34</a></li>
-            <li><a href="uke35.html">Uke 35</a></li>
-            <li><a href="uke36.html">Uke 36</a></li>
-            <!-- Andre uker -->
-        </ul>
+      <div class="back"><a href="../brukerstotte.html">← Tilbake</a></div>
+
+      <h2>Uker</h2>
+      <ul>
+        <li><a class="active" href="uke34.html">Uke 34</a></li>
+        <li><a href="uke35.html">Uke 35</a></li>
+        <li><a href="uke36.html">Uke 36</a></li>
+        <li><a href="uke37.html">Uke 37</a></li>
+        <!-- flere uker -->
+      </ul>
     </nav>
 
     <main>
-        <div class="content">
-            <h1>Uke 34 – Brukerstøtte</h1>
-            <h2>Introduction</h2>
-            <div>
-            <h3>Hva er Brukerstøtte?</h3>
-            <li>Handler om å hjelpe brukere med IT-relaterte problemer</li>
-            <li>Fokus på kommunikasjon, problemløsning, teknisk kunnskap</li>
-            <li>Både teknisk og menneskelig kompetanse er viktig</li>
-            </div><br>
-            <br><div>
-            <h2>Kompetansemål</h2>
-            <li>drøfte hvilke krav og forventninger som stilles til et likeverdig og inkluderende yrkesfellesskap, og beskrive hvilke plikter og rettigheter arbeidsgiver og arbeidstaker har i arbeidslivet
-</li><li>
-bruke og administrere samhandlingsverktøy som effektiviserer samarbeid og deling av informasjon
-</li><li>
-reflektere over og gjøre rede for hvordan intelligente systemer påvirker bransjen og samfunnet
-</li><li>
-beskrive og anvende ulike metoder for å håndtere krevende situasjoner i kontakt med brukere og kunder
-</li><li>
-beskrive og bruke rammeverk for kvalitetssikring av IT-drift
-</li><li>
-feilsøkeog rette feil ved hjelp av feilsøkingsstrategier og relevante rammeverk
-</li><li>
-bruke og tilpasse kommunikasjonsform og fagterminologi i møte med brukere, kunder og fagmiljø
-</li><li>
-utvikle kursmateriell og gjennomføre kurs i relevante IT-systemer tilpasset en målgruppe
-</li><li>
-kartlegge behovet for og utvikle veiledninger for brukere og kunder
-</li><li>
-utøve brukerstøtte og veilede i relevant programvare
-</li><li>
-gjøre rede for og anvende etiske retningslinjer og relevant lovverk i eget arbeid
-            </li></div>
-            <br><div>
-            <h2>Hva skal dere lære som dere kan bruke i arbeidslivet?</h2>
-            <li>IT-support (1. linje og 2. linje)
-</li><li>
-Kundeservice i teknologibransjen
-</li><li>
-Drift og vedlikehold av IT-systemer
-</li><li>
-Bruk av helpdesk-verktøy (Freshdesk, JiraService Management)
-</li><li>Sikker datahåndtering</li><li>
-Kommunikasjonsferdigheter</li></div>
-<div>
-    <h2>Brukerstøtte</h2>
-    <li>
-Arbeidsmiljø og HMS
-</li><li>
-Automatisering og intelligente systemer
-</li><li>
-Etisk bevissthet for IT-personell
-</li><li>
-Lærlingtida
-</li><li>
-Møtet med bedrift, kollegaer og eksterne
-</li><li>
-Møtet med brukeren
-</li><li>
-Personvern
-</li><li>
-Proaktiv IT-drift og brukerstøtte
-</li><li>
-Rettigheter og lisenser
-    </li>
-</div>
-        </div>
-    </main>
-</div>
+      <div class="wrap">
+        <h1 class="page-title">Uke 34 – Brukerstøtte (IM-ITK)</h1>
 
+        <div class="card">
+
+          <!-- 1: Hva er brukerstøtte -->
+          <section class="section">
+            <div>
+              <h1>Hva er brukerstøtte?</h1>
+              <p>Hjelpe brukere med IT-problemer på en trygg, effektiv og vennlig måte. Kombinerer <b>kommunikasjon</b>, <b>feilsøking</b> og <b>teknisk forståelse</b>.</p>
+              <div>
+                <span class="pill">kommunikasjon</span>
+                <span class="pill">feilsøking</span>
+                <span class="pill">kundeservice</span>
+                <span class="pill">personvern</span>
+              </div>
+            </div>
+            <figure>
+              <img src="./files/support.jpg" alt="Illustrasjon av IT-support i arbeid">
+              <figcaption>IT-support i praksis</figcaption>
+            </figure>
+          </section>
+
+          <!-- 2: Læringsmål (ukefokus) -->
+          <section class="section section--flip">
+            <div>
+              <h2>Ukas læringsmål</h2>
+              <ul>
+                <li>Forklare hva brukerstøtte er og hvordan vi jobber.</li>
+                <li>Øve på <b>strukturert feilsøking</b> (grunnleggende sjekklister).</li>
+                <li>Tilpasse <b>tone og språk</b> i kommunikasjon med bruker.</li>
+                <li>Kjenne til <b>personvern/sikkerhet</b> i enkel supportsituasjon.</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./files/mal.jpg" alt="Mål og progresjon" />
+              <figcaption>Mål for uke 34</figcaption>
+            </figure>
+          </section>
+
+          <!-- 3: Hvordan jobber vi -->
+          <section class="section">
+            <div>
+              <h2>Hvordan jobber vi i timene?</h2>
+              <ul>
+                <li>Korte faginnslag → <b>mini-case</b> i par/grupper.</li>
+                <li>Små leveranser i Teams (notater, skjermbilder, korte svar).</li>
+                <li>Alt loggføres på egen <b>web/blogg</b> (GitHub Pages el.l.).</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./files/blog.png" alt="Arbeidsflyt: innmelding → analyse → løsning">
+              <figcaption>Arbeidsflyt i brukerstøtte</figcaption>
+            </figure>
+          </section>
+
+          <!-- 4: Verktøy denne uka -->
+          <section class="section section--flip">
+            <div>
+              <h2>Verktøy denne uka</h2>
+              <ul>
+                <li><b>Teams & Outlook</b> – kommunikasjon, innlevering.</li>
+                <li><b>Helpdesk-demo</b> – Spiceworks eller Jira Service Management (visning/intro).</li>
+                <li><b>Skjermdeling/fjernhjelp</b> – prinsipper og etikk.</li>
+              </ul>
+            </div>
+            <figure>
+              <img src="./files/apps.jpg" alt="Ikoner: Teams, e-post, helpdesk">
+              <figcaption>Verktøystart</figcaption>
+            </figure>
+          </section>
+
+          <!-- 8: Personvern & etikk light -->
+          <section class="section section--flip">
+            <div>
+              <h2>Personvern & etikk</h2>
+              <ul>
+                <li>Se minst mulig persondata – kun det som er nødvendig.</li>
+                <li>Spør alltid før fjernstyring, informér om hva du gjør.</li>
+              </ul>
+            </div>
+            <figure style="align-items: center;">
+              <img src="./files/personvern.jpg" alt="Lås og data-ikon" style="max-width: 200px;" />
+              <figcaption>«Need-to-know»</figcaption>
+            </figure>
+          </section>
+
+
+        </div>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
