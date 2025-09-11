@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: './Mailand_IT',
+  base: '/Mailand_IT/DisAppEx21/',
 });
