@@ -6,38 +6,93 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/include.js" defer></script>
 </head>
 <body>
     <header></header>
 
-    <main>
+    <main style="padding:12px;">
+        <!-- Welcome Section with Images on Sides -->
         <section class="welcome-section">
-            <img src="images/mpuls_logo.png" alt="Mailand videregående skole">
+            <img src="images/mpuls_logo.png" alt="Mailand videregående skole" style="max-width:30%; height:auto;">
             <h2>Velkommen!</h2>
-            <img src="images/mailand_ut.jpg" alt="Mailand videregående skole">
-        </section>
-        <section class="news-section">
-            <h3>Foresattmøter på Mailand</h3>
-            <div style="display:flex; gap:20px; flex-wrap:wrap;">
-                <div style="flex:1; min-width:300px;">
-                    <p><strong>Foresattmøter på Mailand 1ST, 1YF, 2YF 27. og 28. august</strong></p>
-                    <p>Foresatte samles først i det store auditoriet for informasjon og presentasjon av ledelse, rådgiver og andre sentrale personer for elevene, deretter er det et felles møte med kontaktlærerne for elever og foresatte i et klasserom. Møtetidspunktene er:</p>
-                    <ul>
-                        <li><strong>Onsdag 27. august:</strong> Foresattmøte Vg1 ST kl. 17-17.30 felles for foresatte i Auditorium 1 og 17.30-18.30 i klasserom, kontaktlærer med elever og foresatte</li>
-                        <li><strong>Torsdag 28. august:</strong> Foresattmøte YF1 kl. 17-17.30 felles for foresatte i Auditorium 1 og 17.30-18.30 i klasserom, kontaktlærer med elever og foresatte</li>
-                        <li><strong>Torsdag 28. august:</strong> Foresattmøte YF2 kl. 18.15-18.45 felles for foresatte i Auditorium 1 og 18.45-19.45 i klasserom, kontaktlærer med elever og foresatte</li>
-                    </ul>
-                    <p>Dersom eleven er over 18 år, velger eleven om man ønsker å ha med foresatte.</p>
-                    <p><strong>Velkommen til Mailand og til å bli bedre kjent med oss!</strong></p>
+            <img src="images/mailand_ut.jpg" alt="Mailand videregående skole" style="max-width:30%; height:auto;">
+            </section>
+
+        <!-- Grid Section for Nyheter, Intervjuer, Diskusjoner -->
+        <section class="grid-section">
+            <!-- Nyheter Row -->
+            <h3>Nyheter</h3>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <img src="images/news1.jpg" alt="Nyhet 1">
+                    <h4>Nyhet 1</h4>
+                    <p>Få de siste nyhetene fra skolen.</p>
+                    <a href="nyheter.html">Les mer</a>
                 </div>
-                <div style="flex:1; min-width:300px; text-align:center;">
-                    <img src="images/mailand_ut.jpg" alt="Foresattmøte" style="max-width:100%; height:auto; border-radius:8px;">
+                <div class="grid-card">
+                    <img src="images/news2.jpg" alt="Nyhet 2">
+                    <h4>Nyhet 2</h4>
+                    <p>En nyhet med interessant innhold.</p>
+                    <a href="nyheter.html">Les mer</a>
+                </div>
+                <div class="grid-card">
+                    <img src="images/news3.jpg" alt="Nyhet 3">
+                    <h4>Nyhet 3</h4>
+                    <p>Nyeste oppdateringer fra Mailand.</p>
+                    <a href="nyheter.html">Les mer</a>
+                </div>
+            </div>
+
+            <!-- Intervjuer Row -->
+            <h3>Intervjuer</h3>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <img src="images/interview1.jpg" alt="Intervju 1">
+                    <h4>Intervju 1</h4>
+                    <p>Et intervju med en elev.</p>
+                    <a href="intervju.html">Les mer</a>
+                </div>
+                <div class="grid-card">
+                    <img src="images/interview2.jpg" alt="Intervju 2">
+                    <h4>Intervju 2</h4>
+                    <p>Et intervju med en lærer.</p>
+                    <a href="intervju.html">Les mer</a>
+                </div>
+                <div class="grid-card">
+                    <img src="images/interview3.jpg" alt="Intervju 3">
+                    <h4>Intervju 3</h4>
+                    <p>Et inspirerende intervju.</p>
+                    <a href="intervju.html">Les mer</a>
+                </div>
+            </div>
+
+            <!-- Diskusjoner Row -->
+            <h3>Diskusjoner</h3>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <img src="images/discussion1.jpg" alt="Diskusjon 1">
+                    <h4>Diskusjon 1</h4>
+                    <p>Diskuter skolenes fremtid.</p>
+                    <a href="diskusjon.html">Les mer</a>
+                </div>
+                <div class="grid-card">
+                    <img src="images/discussion2.jpg" alt="Diskusjon 2">
+                    <h4>Diskusjon 2</h4>
+                    <p>Del dine tanker om utdanning.</p>
+                    <a href="diskusjon.html">Les mer</a>
+                </div>
+                <div class="grid-card">
+                    <img src="images/discussion3.jpg" alt="Diskusjon 3">
+                    <h4>Diskusjon 3</h4>
+                    <p>Engasjer deg i skolens temaer.</p>
+                    <a href="diskusjon.html">Les mer</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer></footer>
+
+    <script src="scripts/include.js"></script>
 </body>
 </html>

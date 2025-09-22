@@ -41,7 +41,7 @@ main {
     margin-bottom: 120px;
     flex: 1;
     overflow-y: auto;
-    padding: 20px;
+    padding: 12px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -83,7 +83,7 @@ footer a {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 40px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .welcome-section h2 {
@@ -101,38 +101,27 @@ footer a {
     border-radius: 8px;
 }
 
-/* News Section for index.html */
-.news-section {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.news-section h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
+.welcome-section p {
+    width: 100%;
     text-align: center;
 }
 
-.news-section ul {
-    padding-left: 20px;
-    margin: 15px 0;
+/* Grid Section for all pages */
+.grid-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin: 20px 0 10px;
+    text-align: center;
 }
 
-.news-section li {
-    margin-bottom: 10px;
-}
-
-/* News Grid for nyheter.html */
-.news-grid {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 40px;
 }
 
-.news-card {
+.grid-card {
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -141,38 +130,124 @@ footer a {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.news-card:hover {
+.grid-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.news-card img {
+.grid-card img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
     margin-bottom: 15px;
 }
 
-.news-card h3 {
+.grid-card h3 {
     font-size: 1.3em;
     color: #318ada;
     margin: 0 0 10px;
 }
 
-.news-card p {
+.grid-card p {
     font-size: 1em;
     color: #666;
     margin: 0 0 15px;
 }
 
-.news-card a {
+.grid-card a {
     color: #318ada;
     text-decoration: none;
     font-weight: bold;
 }
 
-.news-card a:hover {
+.grid-card a:hover {
     text-decoration: underline;
+}
+
+/* Content Section for about and kontakt */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.content-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #318ada;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #2563eb;
 }
 
 /* Responsive Adjustments */
@@ -188,12 +263,15 @@ footer a {
         width: 100%;
     }
 
-    .news-section div {
-        flex: none;
-        width: 100%;
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 
-    .news-grid {
-        grid-template-columns: 1fr;
+    .content-section {
+        padding: 0 10px;
+    }
+
+    .contact-form {
+        padding: 0 10px;
     }
 }
