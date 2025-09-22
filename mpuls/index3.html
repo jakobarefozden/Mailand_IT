@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>MPuls – Skoleavis for Mailand VGS</title>
+</head>
+<body>
+  
+<header style="background:#318ada;padding:12px;display:flex;align-items:center;justify-content:space-between;">
+  <!-- Venstre: Logo og tittel -->
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
+  </div>
+
+  <!-- Høyre: Navigasjon -->
+  <nav>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;gap:10px; font-weight:bold; color:#ffffff; font-size: xx-large;">
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="about.html">Om MPuls</a></li>
+      <li><a href="intervju.html">Intervju</a></li>
+      <li><a href="nyheter.html">Nyheter</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="diskusjon.html">Diskusjon</a></li>
+    </ul>
+  </nav>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
+  </div>
+</header>
+
+
+  <main style="padding:12px;">
+    <h2>Velkommen!</h2>
+    <img src="images/mailand_ut.jpg" alt="Velkommen" style="max-width:100%;height:auto;">
+    <p>Dette er forsiden (index.html). Her finner du lenker til de andre sidene: Om meg, CV, Hobby, Kontakt og Diskusjon.</p>
+    <p>Vi bruker semantiske tagger: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> og <code>&lt;footer&gt;</code>.
+      Alle sidene har samme topp og bunn (felles struktur).</p>
+  </main>
+
+  <footer style="background:#318ada;padding:12px;display:flex;align-items:center;justify-content:space-between;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Venstre: Logo -->
+    <div style="display:flex;align-items:center;gap:12px;">
+        <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
+    </div>
+    <!-- Midten: Footer-innhold -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1200px;font-size:16px;color:white;">
+        <div>
+            <p><strong>Mailand videregående skole</strong></p>
+            <p>Postboks 313</p>
+            <p>1470 Lørenskog</p>
+        </div>
+        <div>
+            <p><strong>Kontakt</strong></p>
+            <p><i class="fas fa-phone" style="margin-right:8px;"></i><a href="tel:+479117440" style="color:white;text-decoration:none;">67 91 14 40</a></p>
+            <p><i class="fas fa-envelope" style="margin-right:8px;"></i><a href="mailto:mailandvgs@afk.no" style="color:white;text-decoration:none;">mailandvgs@afk.no</a></p>
+        </div>
+        <div>
+            <p><strong>Lenker</strong></p>
+            <p><i class="fas fa-globe" style="margin-right:8px;"></i><a href="https://afk.no/mailand-vgs/" style="color:white;text-decoration:none;">afk.no/mailand-vgs</a></p>
+            <p><i class="fab fa-facebook" style="margin-right:8px;"></i><a href="https://www.facebook.com/mailandvgs" style="color:white;text-decoration:none;">Facebook</a></p>
+            <p><i class="fab fa-instagram" style="margin-right:8px;"></i><a href="https://www.instagram.com/mailand_vgs/" style="color:white;text-decoration:none;">Instagram</a></p>
+        </div>
+        <div style="text-align:center;margin-top:16px;grid-column:span 3;font-size:14px;">
+            <small>© 2025 Min nettside</small>
+        </div>
+    </div>
+    <!-- Høyre: Logo -->
+    <div style="display:flex;align-items:center;gap:12px;">
+        <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
+    </div>
+</footer>
+</body>
+</html>

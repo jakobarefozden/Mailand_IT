@@ -1,39 +1,154 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <title>Min nettside – Diskusjon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Reset default margins and ensure full height */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #318ada;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        /* Fixed Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #318ada;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        /* Scrollable Content Area */
+        main {
+            margin-top: 80px;
+            margin-bottom: 120px;
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navigation Link Styles */
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; /* Increased gap for more spacing */
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: x-large; /* Reduced from xx-large for less crowding */
+            padding: 8px 12px; /* Added padding for better click area */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+            border-radius: 4px;
+        }
+
+        /* Footer Link Styles */
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <header style="background:#f2f2f2;padding:12px;">
-    <h1 style="margin:0;">Min nettside</h1>
-    <nav>
-      <ul style="list-style:none;padding:0;margin:8px 0;display:flex;gap:10px;">
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="about.html">Om meg</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="hobby.html">Hobby</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="diskusjon.html">Diskusjon</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <!-- Venstre: Logo -->
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
+        </div>
+        <!-- Høyre: Navigasjon -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="about.html">Om MPuls</a></li>
+                <li><a href="intervju.html">Intervju</a></li>
+                <li><a href="nyheter.html">Nyheter</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="diskusjon.html">Diskusjon</a></li>
+            </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
+        </div>
+    </header>
+
+    <!-- Scrollable Content Area -->
+    
 
   <main style="padding:12px;">
-    <h2>Diskusjonsspørsmål</h2>
-
-    <h3>1) Hvorfor er det viktig at alle sidene har lik header og footer?</h3>
-    <p><strong>Eksempelsvar:</strong> Lik header og footer gir gjenkjenning og struktur. Brukeren forstår raskt hvor menyen og viktig info er på hver side, noe som gjør navigasjonen raskere og mer forutsigbar. Det ser også mer profesjonelt ut.</p>
-
-    <h3>2) Hva kan skje hvis menyen ikke er den samme på alle sidene?</h3>
-    <p><strong>Eksempelsvar:</strong> Brukeren kan bli forvirret, miste oversikten og kanskje forlate siden. Ulik meny kan føre til brutte lenker eller at man ikke finner tilbake til innhold, som gir dårlig brukeropplevelse.</p>
-
-    <h3>3) Hvordan gjør dette det lettere for de som besøker nettsiden?</h3>
-    <p><strong>Eksempelsvar:</strong> En felles meny og lik struktur gjør at besøkende raskt finner fram. De slipper å lete på nytt på hver underside, og kan fokusere på innholdet. Dette sparer tid og reduserer feilklikk.</p>
+    <h2>Velkommen!</h2>
+    <img src="images/mailand_ut.jpg" alt="Velkommen" style="max-width:100%;height:auto;">
+    <p>Dette er forsiden (index.html). Her finner du lenker til de andre sidene: Om meg, CV, Hobby, Kontakt og Diskusjon.</p>
+    <p>Vi bruker semantiske tagger: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> og <code>&lt;footer&gt;</code>.
+      Alle sidene har samme topp og bunn (felles struktur).</p>
   </main>
 
-  <footer style="background:#f9f9f9;padding:12px;margin-top:24px;">
-    <small>© 2025 Min nettside • E-post: elev@example.com</small>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <!-- Venstre: Logo -->
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
+        </div>
+        <!-- Midten: Footer-innhold -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1200px;font-size:16px;color:white;">
+            <div>
+                <p><strong>Mailand videregående skole</strong></p>
+                <p>Postboks 313</p>
+                <p>1470 Lørenskog</p>
+            </div>
+            <div>
+                <p><strong>Kontakt</strong></p>
+                <p><i class="fas fa-phone" style="margin-right:8px;"></i><a href="tel:+479117440">67 91 14 40</a></p>
+                <p><i class="fas fa-envelope" style="margin-right:8px;"></i><a href="mailto:mailandvgs@afk.no">mailandvgs@afk.no</a></p>
+            </div>
+            <div>
+                <p><strong>Lenker</strong></p>
+                <p><i class="fas fa-globe" style="margin-right:8px;"></i><a href="https://afk.no/mailand-vgs/">afk.no/mailand-vgs</a></p>
+                <p><i class="fab fa-facebook" style="margin-right:8px;"></i><a href="https://www.facebook.com/mailandvgs">Facebook</a></p>
+                <p><i class="fab fa-instagram" style="margin-right:8px;"></i><a href="https://www.instagram.com/mailand_vgs/">Instagram</a></p>
+            </div>
+            <div style="text-align:center;margin-top:16px;grid-column:span 3;font-size:14px;">
+                <small>© 2025 Min nettside</small>
+            </div>
+        </div>
+        <!-- Høyre: Logo -->
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
+        </div>
+    </footer>
 </body>
 </html>
