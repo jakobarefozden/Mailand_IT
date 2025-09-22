@@ -3,152 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* Reset default margins and ensure full height */
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Fixed Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #318ada;
-            padding: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-        }
-
-        /* Fixed Footer */
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #318ada;
-            padding: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-        }
-
-        /* Scrollable Content Area */
-        main {
-            margin-top: 80px;
-            margin-bottom: 120px;
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Navigation Link Styles */
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px; /* Increased gap for more spacing */
-        }
-
-        header nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: x-large; /* Reduced from xx-large for less crowding */
-            padding: 8px 12px; /* Added padding for better click area */
-            transition: background-color 0.3s; /* Smooth hover effect */
-        }
-
-        header nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
-            border-radius: 4px;
-        }
-
-        /* Footer Link Styles */
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/include.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <!-- Venstre: Logo -->
-        <div style="display:flex;align-items:center;gap:12px;">
-            <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
-        </div>
-        <!-- Høyre: Navigasjon -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="about.html">Om MPuls</a></li>
-                <li><a href="intervju.html">Intervju</a></li>
-                <li><a href="nyheter.html">Nyheter</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="diskusjon.html">Diskusjon</a></li>
-            </ul>
-        </nav>
-        <div style="display:flex;align-items:center;gap:12px;">
-            <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
-        </div>
-    </header>
+    <header></header>
 
-    <!-- Scrollable Content Area -->
-    
+    <main>
+        <section class="news-section">
+            <h2>Nyheter</h2>
+            <div class="news-grid">
+                <!-- Haber 1: Foresattmøter -->
+                <div class="news-card">
+                    <img src="nyheter/images/foresattmote.jpg" alt="Foresattmøte">
+                    <h3>Foresattmøter på Mailand</h3>
+                    <p>Foresattmøter for 1ST, 1YF, 2YF 27. og 28. august i Auditorium 1 og klasserom. Møtetider: 27. august Vg1 ST kl. 17-18.30, 28. august YF1 kl. 17-18.30, YF2 kl. 18.15-19.45.</p>
+                    <a href="#foresattmote">Les mer</a>
+                </div>
+                <!-- Haber 2 -->
+                <div class="news-card">
+                    <img src="images/news1.jpg" alt="Nyhet 1">
+                    <h3>Nyhet 1</h3>
+                    <p>En kort beskrivelse av den første nyheten som gir en smakebit på innholdet.</p>
+                    <a href="#news1">Les mer</a>
+                </div>
+                <!-- Haber 3 -->
+                <div class="news-card">
+                    <img src="images/news2.jpg" alt="Nyhet 2">
+                    <h3>Nyhet 2</h3>
+                    <p>En kort beskrivelse av den andre nyheten som fanger oppmerksomheten.</p>
+                    <a href="#news2">Les mer</a>
+                </div>
+                <!-- Haber 4 -->
+                <div class="news-card">
+                    <img src="images/news3.jpg" alt="Nyhet 3">
+                    <h3>Nyhet 3</h3>
+                    <p>En kort beskrivelse av den tredje nyheten for å engasjere leseren.</p>
+                    <a href="#news3">Les mer</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <main style="padding:12px;">
-    <h2>Velkommen!</h2>
-    <img src="images/mailand_ut.jpg" alt="Velkommen" style="max-width:100%;height:auto;">
-    <p>Dette er forsiden (index.html). Her finner du lenker til de andre sidene: Om meg, CV, Hobby, Kontakt og Diskusjon.</p>
-    <p>Vi bruker semantiske tagger: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code> og <code>&lt;footer&gt;</code>.
-      Alle sidene har samme topp og bunn (felles struktur).</p>
-  </main>
-
-    <!-- Footer -->
-    <footer>
-        <!-- Venstre: Logo -->
-        <div style="display:flex;align-items:center;gap:12px;">
-            <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
-        </div>
-        <!-- Midten: Footer-innhold -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1200px;font-size:16px;color:white;">
-            <div>
-                <p><strong>Mailand videregående skole</strong></p>
-                <p>Postboks 313</p>
-                <p>1470 Lørenskog</p>
-            </div>
-            <div>
-                <p><strong>Kontakt</strong></p>
-                <p><i class="fas fa-phone" style="margin-right:8px;"></i><a href="tel:+479117440">67 91 14 40</a></p>
-                <p><i class="fas fa-envelope" style="margin-right:8px;"></i><a href="mailto:mailandvgs@afk.no">mailandvgs@afk.no</a></p>
-            </div>
-            <div>
-                <p><strong>Lenker</strong></p>
-                <p><i class="fas fa-globe" style="margin-right:8px;"></i><a href="https://afk.no/mailand-vgs/">afk.no/mailand-vgs</a></p>
-                <p><i class="fab fa-facebook" style="margin-right:8px;"></i><a href="https://www.facebook.com/mailandvgs">Facebook</a></p>
-                <p><i class="fab fa-instagram" style="margin-right:8px;"></i><a href="https://www.instagram.com/mailand_vgs/">Instagram</a></p>
-            </div>
-            <div style="text-align:center;margin-top:16px;grid-column:span 3;font-size:14px;">
-                <small>© 2025 Min nettside</small>
-            </div>
-        </div>
-        <!-- Høyre: Logo -->
-        <div style="display:flex;align-items:center;gap:12px;">
-            <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
-        </div>
-    </footer>
+    <footer></footer>
 </body>
 </html>
