@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Reset default margins and ensure full height */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fixed Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #318ada;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        /* Fixed Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #318ada;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        /* Scrollable Content Area */
+        main {
+            margin-top: 80px;
+            margin-bottom: 120px;
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navigation Link Styles */
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; /* Increased gap for more spacing */
+        }
+
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: x-large; /* Reduced from xx-large for less crowding */
+            padding: 8px 12px; /* Added padding for better click area */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+            border-radius: 4px;
+        }
+
+        /* Footer Link Styles */
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .news-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-section ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.news-section li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .news-section div {
+        flex: none;
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Venstre: Logo -->
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
+        </div>
+        <!-- Høyre: Navigasjon -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="about.html">Om MPuls</a></li>
+                <li><a href="intervju.html">Intervju</a></li>
+                <li><a href="nyheter.html">Nyheter</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="diskusjon.html">Diskusjon</a></li>
+            </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
+        </div>
+    </header>
+
+    <!-- Scrollable Content Area -->
+    
+
+  <main style="padding:12px;">
+    
+    <!-- Nyhet her -->
+    <section class="news-section" style="margin-top:40px;">
+        <h3>Nye regler for skoleskyss i videregående skole</h3>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:300px;">
+                <section class="tekst" aria-label="Brødtekst"><h2 class="il-heading il-heading--h2">Finn ut hva som gjelder for deg i god tid før skolestart</h2><p>Bruker du vanlig kollektivtilbud, trenger du kun et reisekort med skolebillett. Da må du søke selv innen skolestart.</p><p>Har du medisinske behov eller bor i et område uten kollektivtilbud, søker skolen for deg. Ta kontakt med skolen i god tid før skolestart.</p><p><a class="InnholdLinkTekst link-webpage broken external-link external" href="https://ruter.no/kjop-billett/skole-og-spesialskyss/skoleskyss-i-akershus/videregaende-skole/" data-id="202921">Les mer om skoleskyssordningen (ruter.no)</a></p><h2 class="il-heading il-heading--h2">Søk om skoleskyss</h2><p>Du søker om skoleskyss i Ruters søknadsportal. Logg inn med ID-Porten.</p><p>Ruter anbefaler at alle elever venter med å søke til de har fått tildelt skoleplass. Førsteinntaket for videregående er 10. juli.</p><p>Velger du å søke <strong>før</strong> du har fått skoleplass, må du velge skole manuelt i søknadsportalen.</p><p><a class="InnholdLinkTekst link-webpage il-custom-button external-link external" href="https://skoleskyss.ruter.no/" data-id="202920"><span>Søk om skoleskyss (ruter.no)</span></a></p></section>
+            </div>
+            <div style="flex:1; min-width:300px; text-align:center;">
+                <img src="./images/ruter-logo-hvit.png" alt="Foresattmøte" style="max-width:100%; height:auto; border-radius:8px;">
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+
+</style>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Venstre: Logo -->
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mpuls_logo.png" alt="Logo" style="height:5em;">
+        </div>
+        <!-- Midten: Footer-innhold -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:1200px;font-size:16px;color:white;">
+            <div>
+                <p><strong>Mailand videregående skole</strong></p>
+                <p>Postboks 313</p>
+                <p>1470 Lørenskog</p>
+            </div>
+            <div>
+                <p><strong>Kontakt</strong></p>
+                <p><i class="fas fa-phone" style="margin-right:8px;"></i><a href="tel:+479117440">67 91 14 40</a></p>
+                <p><i class="fas fa-envelope" style="margin-right:8px;"></i><a href="mailto:mailandvgs@afk.no">mailandvgs@afk.no</a></p>
+            </div>
+            <div>
+                <p><strong>Lenker</strong></p>
+                <p><i class="fas fa-globe" style="margin-right:8px;"></i><a href="https://afk.no/mailand-vgs/">afk.no/mailand-vgs</a></p>
+                <p><i class="fab fa-facebook" style="margin-right:8px;"></i><a href="https://www.facebook.com/mailandvgs">Facebook</a></p>
+                <p><i class="fab fa-instagram" style="margin-right:8px;"></i><a href="https://www.instagram.com/mailand_vgs/">Instagram</a></p>
+            </div>
+            <div style="text-align:center;margin-top:16px;grid-column:span 3;font-size:14px;">
+                <small>© 2025 Min nettside</small>
+            </div>
+        </div>
+        <!-- Høyre: Logo -->
+        <div style="display:flex;align-items:center;gap:12px;">
+            <img src="images/mailand_logo.jpg" alt="Logo" style="height:5em;">
+        </div>
+    </footer>
+</body>
+</html>
