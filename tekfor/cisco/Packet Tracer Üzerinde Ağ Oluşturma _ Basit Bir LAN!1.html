@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://www.sysnettechsolutions.com/cisco-packet-tracer-basit-ag-kurulumu/ -->
+<html lang="tr-TR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Packet Tracer Üzerinde Ağ Oluşturma | Basit Bir LAN!</title>
+    <link data-optimized="2" rel="stylesheet"
+        href="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/6d911c4dec35c18f89a45da8414f68b9.css">
+    
+</head>
+
+<body>
+   
+    <main id="main" class="site-main" style="height: auto !important;">
+        <div id="page" class="single clear" style="height: auto !important; min-height: 0px !important;">
+            <header class="entry-header">
+                <div class="single_post">
+                    <h1 class="title single-title">Cisco Packet Tracer Üzerinde Basit Ağ Kurulumu</h1>
+                   
+                </div>
+            </header>
+            <article class="article" id="post-3030" aria-label="Cisco Packet Tracer Üzerinde Basit Ağ Kurulumu"
+                style="height: auto !important;">
+                <div id="content" class="post-single-content box mark-links" style="height: auto !important;">
+                    <p>Cisco Paket Tracer programını kullanarak basit veya gelişmiş ağ topolojileri oluşturarak
+                        deneyimler kazanabilirsiniz. Ayrıca, Cisco sınavlarına hazırlanıyorsanız, sınavın gerektirdiği
+                        müfredatı bu simülatör yazılımı ile gerçekleştirebilirsiniz.</p>
+                    
+                    <h2 id="jump-1">Packet Tracer ile Bir Network (Ağ) Oluşturma</h2>
+                    <p>Cisco’nun kullanıcıları için geliştirdiği ücretsiz ağ simülatör yazılımı PT ile ağ sınavlarına
+                        kolayca hazırlanabilirsiniz. Bu yazılımın sadece bir sınav için kullanılmadığını unutmayınız.
+                        Aynı zamanda, kendini ağ ve sistem teknolojileri alanında geliştirmek isteyenler de bu programı
+                        kullanmaktadırlar.</p>
+                    
+                    <p>Packet Tracer’da çalışma ortamına bir Router, Switch ve Bilgisayar ekleyerek temel bir network
+                        oluşturabilir ve bilgisayarlar arasındaki veri iletişiminin nasıl gerçekleştiğini
+                        inceleyebilirsiniz.</p>
+                    <p>Bu yazılım size, GNS3’ün zorunlu kıldığı <a
+                            href="https://www.sysnettechsolutions.com/gns3-cisco-ios-indir/" target="_blank"
+                            rel="noopener noreferrer">Cisco IOS imajları</a> ile uğraşmamanızı sağlayarak daha basit
+                        kullanım sunar. Ek olarak, eğer bir eğitmen iseniz öğrencileriniz için ağ aktiviteleri
+                        hazırlayabilir ve onların network bilgisini sınayabilirsiniz.</p>
+                    <h3 id="jump-2">Packet Tracer Topolojisinde Basit Bir LAN Ağ Oluşturma</h3>
+                    <p>Şimdi, Packet Tracer üzerinde Cisco Router’a bağlı iki segment (iki farklı LAN) üzerindeki
+                        bilgisayarlar nasıl haberleşir incelemek için aşağıdaki adımları sırasıyla takip ediniz.</p>
+                    
+                    <p><span id="jump-2-1" class="step">Adım 1</span></p>
+                    <p>Programın çalışma alanı üzerine bir adet Cisco Router, iki adet Cisco Switch ve dört adet
+                        bilgisayar (PC) ekleyiniz. Daha sonra, Router’ın GigabitEthernet arayüzlerinin port ve slot
+                        numaralarını çalışma alanına not ediniz.</p>
+                    <p>Router’ın IOS Command Interface (IOS Komut Arayüzü) açmak için üzerine çift tıklayınız.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-01.png"
+                            alt="Bir Cisco Router&#39;a Bağlı İki Switch ve Dört Bilgisayar" width="740" height="450">
+                    </p>
+                    
+                    <p><span id="jump-2-2" class="step">Adım 2</span></p>
+                    <p>Cisco yönlendirici CLI penceresinde GigabitEthernet0/0 arayüzüne IP adresi atayınız ve arayüzü
+                        aktif etmek için <strong>no shutdown</strong> komutunu uygulayınız.</p>
+                    <pre><code class="Putty">Router&gt;en
+Router#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+Router#
+</code><button onclick="copyToClipboard(this.previousElementSibling.innerText)">Copy</button></pre>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-02.png"
+                            alt="Router&#39;ın GigabitEthernet0/0 Arayüzüne IP Adresi Atama" width="740" height="450">
+                    </p>
+                    <p><span id="jump-2-3" class="step">Adım 3</span></p>
+                    <p>GigabitEthernet0/0 arayüzünü yapılandırdıktan sonra, port yeşil renk olacaktır. Bu rengin anlamı
+                        şudur; arayüz aktif ve çalışıyor.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-03.png"
+                            alt="Port Durumunu İnceleme" width="740" height="450"></p>
+                    <p><span id="jump-2-4" class="step">Adım 4</span></p>
+                    <p>GigabitEthernet 0/1 arayüzüne de bir IP adresi vermek ve portu aktif etmek için şu komutları
+                        uygulayınız:</p>
+                    <pre><code class="Putty">Router(config)#
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+Router(config-if)#end
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+Router#
+</code><button onclick="copyToClipboard(this.previousElementSibling.innerText)">Copy</button></pre>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-04.png"
+                            alt="Router&#39;ın GigabitEthernet0/1 Arayüzüne IP Adresi Atama" width="740" height="450">
+                    </p>
+                    <p><span id="jump-2-5" class="step">Adım 5</span></p>
+                    
+                    <p>Aşağıdaki görüntüde, yönlendiricinin GigabitEthernet portları Switch’lere bağlı ve aktif olduğunu
+                        görebilirsiniz.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-05.png"
+                            alt="Router ile Switch Arasında Ağ Bağlantı Durumu" width="740" height="450"></p>
+                    <p><span id="jump-2-6" class="step">Adım 6</span></p>
+                    <p>Şimdi, topolojiye eklediğiniz bilgisayarlara birer IP adresi vermeniz gerekiyor. Bunu yapmak
+                        için, IP atayacağınız PC üzerine tıklayınız ve Desktop sekmesinde, IP Configuration (IP
+                        Yapılandırma) seçeneğine tıklayınız.</p>
+                    <p>Daha sonra, PC, hangi ağ üzerindeyse o ağın IP bloğuna göre adres vermeniz gerekiyor. Yukarıdaki
+                        topolojiye göre PC0, Router’ın Gig0/0 arayüzü altındaki ağa bağlı olduğu için 192.168.1.0/24
+                        bloğundan bir IP adresi atayınız.</p>
+                    <p>PC0 için IP adresi, alt ağ maskesi ve <a
+                            href="https://www.sysnettechsolutions.com/gateway-nedir/" target="_blank"
+                            rel="noopener noreferrer">varsayılan ağ geçidi ayarlarını</a> aşağıdaki görüntüdeki gibi
+                        yapılandırınız.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-06.png"
+                            alt="Packet Tracer&#39;da Bir Bilgisayarı Yapılandırma" width="740" height="450"></p>
+                    <p><span id="jump-2-7" class="step">Adım 7</span></p>
+                    <p>PC0 üzerinde Command Prompt (Komut İstemi) seçeneğine tıklayınız ve ardından Cisco yönlendirici
+                        Gig0/0 varsayılan ağ geçidine ping atarak ağ bağlantısını sınayınız.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-07.png"
+                            alt="PC&#39;den Varsayılan Ağ Geçidine Ping Atma" width="740" height="450"></p>
+                    
+                    <p><span id="jump-2-8" class="step">Adım 8</span></p>
+                    <p>Bu kez, 192.168.2.0/24 ağındaki PC3’ün TCP/IP ayarlarını aşağıdaki gibi yapılandırınız.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-08.png"
+                            alt="PC3&#39;ün TCP/IP Ayarlarını Yapılandırma" width="740" height="450"></p>
+                    <p><span id="jump-2-9" class="step">Adım 9</span></p>
+                    <p>PC3 üzerinden GigabitEthernet0/1 arayüzü yani varsayılan ağ geçidine Ping attığınızda da işlemin
+                        başarılı olduğunu görebilirsiniz.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-09.png"
+                            alt="PC3&#39;ten Varsayılan Ağ Geçidine Ping Atma" width="740" height="450"></p>
+                    <p><span id="jump-2-10" class="step">Adım 10</span></p>
+                    <p>Aynı şekilde, PC0 üzerinden Router’ın GigabitEthernet0/1 arayüzüne Ping atarsanız, işlem yine
+                        başarılı olacaktır çünkü bir Router’ın ana görevi üzerine bağlı farklı ağları birbirleriyle
+                        haberleştirmesidir.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-10.png"
+                            alt="PC0&#39;dan Router&#39;ın Gig0/1 Arayüzünü Pingleme" width="740" height="450"></p>
+                    <p><span id="jump-2-11" class="step">Adım 11</span></p>
+                   
+                    <p>PC0 üzerinden 192.168.2.10 IP adresli PC2 bilgisayara Ping işlemi;</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-11.png"
+                            alt="PC0&#39;dan Diğer Ağ Segmentteki Bilgisayarı Pingleme" width="740" height="450"></p>
+                    <p><span id="jump-2-12" class="step">Adım 12</span></p>
+                    <p>PC0 üzerinden 192.168.2.20 IP adresli PC3 bilgisayara Ping işlemi;</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-12.png"
+                            alt="PC0&#39;dan PC3&#39;e Ping Testi" width="740" height="450"></p>
+                    <p><span id="jump-2-13" class="step">Adım 13</span></p>
+                    <p>Cisco yönlendirici CLI komut isteminde <strong>show arp</strong> komutunu çalıştırdığınızda
+                        bilgisayarların MAC adreslerini inceleyebilirsiniz.</p>
+                    <p><img decoding="async" loading="lazy" class="alignnone"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-13.png"
+                            alt="Router&#39;da show arp komutu kullanımı" width="740" height="450"></p>
+                    <p><span id="jump-2-14" class="step">Video</span></p>
+                    <p>Cisco simülatör yazılımı ile iki ağı haberleştirmek için aşağıdaki videoyu izleyebilir ve ayrıca
+                        bize destek olmak için <a
+                            href="https://www.youtube.com/channel/UCuA0PJSiVAfCa_tfVvdDRUg?sub_confirmation=1"
+                            target="_blank" rel="noopener noreferrer">YouTube</a> kanalımıza abone olabilirsiniz!</p>
+                   
+                    <p><iframe title="YouTube video player"
+                            data-src="//www.youtube.com/embed/ujcIlNG6fdM?si=lm7L2DH0giSIDERY" width="740" height="416"
+                            allowfullscreen="allowfullscreen"
+                            src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/ujcIlNG6fdM.html"></iframe>
+                    </p>
+                    <h3 id="jump-3">Son Söz</h3>
+                    <p>Bu yazımızda, CPT üzerinde basit bir ağ oluşturarak iki segmentteki bilgisayarları
+                        haberleştirdik.</p>
+                    <p>Eğer ağ ortamına bir adet daha Cisco Router eklerseniz, Router’lar üzerinde <a
+                            href="https://www.sysnettechsolutions.com/rip-protokolu-nedir-rip-yonlendirme-nedir/"
+                            target="_blank" rel="noopener noreferrer">RIP</a>, <a
+                            href="https://www.sysnettechsolutions.com/eigrp-nedir/" target="_blank"
+                            rel="noopener noreferrer">EIGRP</a>, <a
+                            href="https://www.sysnettechsolutions.com/ospf-nedir-ospf-protokolu-nedir/" target="_blank"
+                            rel="noopener noreferrer">OSPF</a> gibi bir yönlendirme protokolü etkinleştirmeniz
+                        gerekecektir. Bizi takip ettiğiniz için teşekkürler!</p>
+                </div>
+                
+            </article>
+           
+          
+            
+        </div>
+    </main>
+  
+  
+</body>
+
+</html>

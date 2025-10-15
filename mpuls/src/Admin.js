@@ -53,10 +53,10 @@ function Admin() {
 
     const unsubscribe = onSnapshot(collection(db, 'articles'), (snapshot) => {
       let articlesList = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      console.log('Fetched articles:', articlesList); // Hata ayıklaması için log
+      console.log('Fetched articles:', articlesList); // 
       if (userRole === 'student' && currentUser.email) {
         articlesList = articlesList.filter(article => article.author === currentUser.email);
-        console.log('Filtered articles for student:', articlesList); // Hata ayıklaması için log
+        console.log('Filtered articles for student:', articlesList); // 
       }
       setArticles(articlesList);
     });

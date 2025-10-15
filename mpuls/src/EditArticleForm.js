@@ -1,38 +1,70 @@
-import React, { useState } from 'react'; // React import eklendi
-import { doc, updateDoc } from 'firebase/firestore';
+import React, { useState } from 'react';
+import { doc, updateDoc, deleteField, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
 
 function EditArticleForm({ article, onClose }) {
-  const [editTitle, setEditTitle] = useState(article.title);
-  const [editContent, setEditContent] = useState(article.content);
-  const [editCategory, setEditCategory] = useState(article.category);
-  const [editImageUrl, setEditImageUrl] = useState(article.imageUrl ? article.imageUrl.replace('/images/', '') : '');
+  // Base fields
+  const [editTitle, setEditTitle] = useState(article.title || '');
+  const [editContent, setEditContent] = useState(article.content || '');
+  const [editCategory, setEditCategory] = useState(article.category || 'nyheter');
+
+  // Backward compatibility: prefer images[], otherwise use imageUrl
+  const initialImages = Array.isArray(article.images)
+    ? article.images
+    : (article.imageUrl ? [article.imageUrl] : []);
+
+  // Show plain filenames in the textarea (strip /images/)
+  const [imagesInput, setImagesInput] = useState(
+    initialImages.map(u => u.replace(/^\/images\//, '')).join('\n')
+  );
+
   const [loading, setLoading] = useState(false);
 
-  const applyBold = () => {
-    document.execCommand('bold', false, null);
-  };
+  // Simple helpers to append markdown-like tokens to content
+  const applyBold = () => setEditContent(prev => `${prev}${prev && !prev.endsWith('\n') ? '\n' : ''}**bold**`);
+  const applyItalic = () => setEditContent(prev => `${prev}${prev && !prev.endsWith('\n') ? '\n' : ''}*italic*`);
 
-  const applyItalic = () => {
-    document.execCommand('italic', false, null);
-  };
+  // Parse comma/newline separated values -> URLs/paths
+  const parseImages = (raw) =>
+    raw
+      .split(/[\n,]+/g)
+      .map(s => s.trim())
+      .filter(Boolean)
+      .map(name =>
+        name.startsWith('/images/') || name.startsWith('http')
+          ? name
+          : `/images/${name}`
+      );
 
   const handleUpdate = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
-      await updateDoc(doc(db, 'articles', article.id), {
+      const images = parseImages(imagesInput);
+      const coverImage = images[0] || '';
+
+      const payload = {
         title: editTitle,
         content: editContent,
         category: editCategory,
-        imageUrl: editImageUrl ? `/images/${editImageUrl}` : '',
-      });
-      console.log('Article updated successfully');
-      onClose();
-    } catch (error) {
-      console.error('Error updating article:', error);
+        images,
+        coverImage,
+        updatedAt: serverTimestamp(),
+      };
+
+      // Clean legacy field if present
+      if ('imageUrl' in article) {
+        payload.imageUrl = deleteField();
+      }
+
+      await updateDoc(doc(db, 'articles', article.id), payload);
+      onClose?.();
+    } catch (err) {
+      console.error('Error updating article:', err);
+      alert('Kunne ikke oppdatere artikkelen. Se konsollen.');
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (
@@ -47,22 +79,15 @@ function EditArticleForm({ article, onClose }) {
           required
         />
       </div>
+
       <div>
         <label className="block">Innhold</label>
         <div className="border rounded p-2 mb-2">
           <div className="flex space-x-2 mb-2">
-            <button
-              type="button"
-              onClick={applyBold}
-              className="px-2 py-1 bg-gray-200 rounded"
-            >
+            <button type="button" onClick={applyBold} className="px-2 py-1 bg-gray-200 rounded" aria-label="Sett inn fet tekst">
               <strong>B</strong>
             </button>
-            <button
-              type="button"
-              onClick={applyItalic}
-              className="px-2 py-1 bg-gray-200 rounded"
-            >
+            <button type="button" onClick={applyItalic} className="px-2 py-1 bg-gray-200 rounded" aria-label="Sett inn kursiv tekst">
               <em>I</em>
             </button>
           </div>
@@ -70,12 +95,12 @@ function EditArticleForm({ article, onClose }) {
             value={editContent}
             onChange={(e) => setEditContent(e.target.value)}
             className="w-full border-none p-2 rounded focus:outline-none"
-            rows="4"
+            rows={6}
             required
-            contentEditable="true"
           />
         </div>
       </div>
+
       <div>
         <label className="block">Kategori</label>
         <select
@@ -88,16 +113,21 @@ function EditArticleForm({ article, onClose }) {
           <option value="diskusjoner">Diskusjoner</option>
         </select>
       </div>
+
       <div>
-        <label className="block">Bilde (bare filnavn, eks. resim.jpg)</label>
-        <input
-          type="text"
-          value={editImageUrl}
-          onChange={(e) => setEditImageUrl(e.target.value)}
+        <label className="block">Bilder (kun filnavn – flere: komma eller ny linje)</label>
+        <textarea
+          value={imagesInput}
+          onChange={(e) => setImagesInput(e.target.value)}
           className="w-full border p-2 rounded"
-          placeholder="resim.jpg"
+          placeholder={`bilde1.jpg, bilde2.png\neller\nbilde1.jpg\nbilde2.png`}
+          rows={3}
         />
+        <p className="text-xs text-gray-500 mt-1">
+          Første bildet brukes som <strong>forside</strong>. Hvis du bruker relative stier, sørg for at filene ligger i <code>public/images/</code>.
+        </p>
       </div>
+
       <button
         disabled={loading}
         type="submit"
@@ -105,7 +135,9 @@ function EditArticleForm({ article, onClose }) {
       >
         {loading ? 'Oppdaterer...' : 'Oppdater artikkel'}
       </button>
+
       <button
+        type="button"
         onClick={onClose}
         className="w-full mt-2 px-4 py-2 bg-gray-500 text-white rounded"
       >
