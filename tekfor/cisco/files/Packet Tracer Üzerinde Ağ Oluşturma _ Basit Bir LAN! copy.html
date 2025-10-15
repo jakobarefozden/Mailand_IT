@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Enkel nettverksoppsett i Cisco Packet Tracer</title>
+<link data-optimized="2" href="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/6d911c4dec35c18f89a45da8414f68b9.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="site-main" id="main" style="height: auto !important;">
+<div class="single clear" id="page" style="height: auto !important; min-height: 0px !important;">
+<header class="entry-header">
+<div class="single_post">
+    <a href="cisco.html" class="back-link">← Tilbake</a>
+<h1 class="title single-title">Enkel nettverksoppsett i Cisco Packet Tracer</h1>
+</div>
+</header>
+<article aria-label="Cisco Packet Tracer Üzerinde Basit Ağ Kurulumu" class="article" id="post-3030" style="height: auto !important;">
+<div class="post-single-content box mark-links" id="content" style="height: auto !important;">
+<p>Med Cisco Packet Tracer kan du bygge enkle eller avanserte nettverkstopologier og få praktisk erfaring. Forbereder du deg til Cisco-eksamener, kan du øve på pensum med denne simuleringsprogramvaren.</p>
+<h2 id="jump-1">Opprette et nettverk i Packet Tracer</h2>
+<p>Med Ciscos gratis nettverkssimulator Packet Tracer kan du enkelt forberede deg til nettverkstester. Programmet brukes ikke bare til eksamenstrening, men også av dem som vil utvikle seg innen nettverks- og systemteknologi.</p>
+<p>Ved å legge til en ruter, en svitsj og en PC i arbeidsområdet kan du lage et grunnleggende nettverk og undersøke hvordan data flyter mellom datamaskinene.</p>
+<p>Programmet forenkler bruken ved at du slipper å håndtere Cisco IOS-avbildninger slik som i GNS3. I tillegg kan lærere lage nettverksaktiviteter for elever og teste nettverkskunnskapene deres.</p>
+<h3 id="jump-2">Bygge et enkelt LAN i Packet Tracer-topologi</h3>
+<p>Følg trinnene nedenfor for å se hvordan datamaskiner i to segmenter (to ulike LAN) kommuniserer via en Cisco-ruter i Packet Tracer.</p>
+<p>Trinn 1</p>
+<p>Legg til én Cisco-ruter, to Cisco-svitsjer og fire PC-er i arbeidsområdet. Noter port- og slot-numrene for ruterens GigabitEthernet-grensesnitt i arbeidsområdet.</p>
+<p>Dobbeltklikk på ruteren for å åpne IOS-kommandogrensesnittet.</p>
+<p><img alt="Bir Cisco Router'a Bağlı İki Switch ve Dört Bilgisayar" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-01.png" width="740"/>
+</p>
+<p>Trinn 2</p>
+<p>Tildel en IP-adresse til grensesnittet GigabitEthernet0/0 i ruterens CLI og aktiver grensesnittet med kommandoen no shutdown.</p>
+<pre><code class="Putty">Router&gt;en
+Router#conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.1.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+Router#
+</code><button onclick="copyToClipboard(this.previousElementSibling.innerText)">Copy</button></pre>
+<p><img alt="Router'ın GigabitEthernet0/0 Arayüzüne IP Adresi Atama" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-02.png" width="740"/>
+</p>
+<p>Trinn 3</p>
+<p>Etter at du har konfigurert GigabitEthernet0/0, blir porten grønn. Det betyr at grensesnittet er aktivt og fungerer.</p>
+<p><img alt="Port Durumunu İnceleme" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-03.png" width="740"/></p>
+<p>Trinn 4</p>
+<p>Gi også en IP-adresse til grensesnittet GigabitEthernet0/1 og aktiver porten med følgende kommandoer:</p>
+<pre><code class="Putty">Router(config)#
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+Router(config-if)#end
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+Router#
+</code><button onclick="copyToClipboard(this.previousElementSibling.innerText)">Copy</button></pre>
+<p><img alt="Router'ın GigabitEthernet0/1 Arayüzüne IP Adresi Atama" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-04.png" width="740"/>
+</p>
+<p>Trinn 5</p>
+<p>På bildet under ser du at ruterens GigabitEthernet-porter er koblet til svitsjene og er aktive.</p>
+<p><img alt="Router ile Switch Arasında Ağ Bağlantı Durumu" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-05.png" width="740"/></p>
+<p>Trinn 6</p>
+<p>Nå må du gi hver PC i topologien en IP-adresse. Klikk på PC-en du vil konfigurere, gå til fanen Desktop og velg IP Configuration.</p>
+<p>Gi PC-en en adresse fra IP-blokken til nettverket den er koblet til. I topologien over er PC0 tilkoblet ruterens Gig0/0, så bruk en adresse fra 192.168.1.0/24.</p>
+<p>Konfigurer IP-adresse, nettverksmaske og standard gateway for PC0 som vist på bildet nedenfor.</p>
+<p><img alt="Packet Tracer'da Bir Bilgisayarı Yapılandırma" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-06.png" width="740"/></p>
+<p>Trinn 7</p>
+<p>På PC0 åpner du Command Prompt og pinger ruterens Gig0/0 (standard gateway) for å teste tilkoblingen.</p>
+<p><img alt="PC'den Varsayılan Ağ Geçidine Ping Atma" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-07.png" width="740"/></p>
+<p>Trinn 8</p>
+<p>Konfigurer nå TCP/IP-innstillingene på PC3 i nettverket 192.168.2.0/24 som vist under.</p>
+<p><img alt="PC3'ün TCP/IP Ayarlarını Yapılandırma" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-08.png" width="740"/></p>
+<p>Trinn 9</p>
+<p>Ping fra PC3 mot GigabitEthernet0/1 (standard gateway) skal også lykkes.</p>
+<p><img alt="PC3'ten Varsayılan Ağ Geçidine Ping Atma" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-09.png" width="740"/></p>
+<p>Trinn 10</p>
+<p>På samme måte vil ping fra PC0 til ruterens GigabitEthernet0/1 lykkes, fordi en ruters hovedoppgave er å formidle trafikk mellom ulike nettverk den er koblet til.</p>
+<p><img alt="PC0'dan Router'ın Gig0/1 Arayüzünü Pingleme" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-10.png" width="740"/></p>
+<p>Trinn 11</p>
+<p>Ping fra PC0 til PC2 med IP-adressen 192.168.2.10:</p>
+<p><img alt="PC0'dan Diğer Ağ Segmentteki Bilgisayarı Pingleme" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-11.png" width="740"/></p>
+<p>Trinn 12</p>
+<p>Ping fra PC0 til PC3 med IP-adressen 192.168.2.20:</p>
+<p><img alt="PC0'dan PC3'e Ping Testi" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-12.png" width="740"/></p>
+<p>Trinn 13</p>
+<p>Kjør kommandoen show arp i ruterens CLI for å se MAC-adressene til enhetene.</p>
+<p><img alt="Router'da show arp komutu kullanımı" class="alignnone" decoding="async" height="450" loading="lazy" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/How-to-Configure-a-Network-in-Cisco-Packet-Tracer-Uzerinde-Basit-Ag-Kurulumu-13.png" width="740"/></p>
+<p>Video</p>
+<p>Se videoen nedenfor for å se hvordan to nett kan kommunisere i Ciscos simulator. Du kan også abonnere på YouTube-kanalen vår for å støtte oss.</p>
+<p><iframe allowfullscreen="allowfullscreen" data-src="//www.youtube.com/embed/ujcIlNG6fdM?si=lm7L2DH0giSIDERY" height="416" src="./Packet Tracer Üzerinde Ağ Oluşturma _ Basit Bir LAN!_files/ujcIlNG6fdM.html" title="YouTube video player" width="740"></iframe>
+</p>
+<h3 id="jump-3">Avslutning</h3>
+<p>I denne artikkelen bygde vi et enkelt nettverk i Packet Tracer og lot maskiner i to segmenter kommunisere.</p>
+<p>Hvis du legger til enda en Cisco-ruter i nettverket, må du aktivere en rutingsprotokoll som RIP, EIGRP eller OSPF på rutene. Takk for at du følger oss!</p>
+</div>
+</article>
+</div>
+</main>
+</body>
+</html>

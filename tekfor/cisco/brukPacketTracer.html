@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teknologiforståelse</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+.container { display: flex; height: 100vh; }
+
+/* NAV */
+nav{
+  width: 220px; background-color: #2c3e50; color: white; padding: 20px; box-sizing: border-box;
+}
+nav h2{
+  font-size: 18px; margin-top: 0; border-bottom: 1px solid #7f8c8d; padding-bottom: 5px;
+}
+nav ul{ list-style: none; padding: 0; margin: 0; }
+nav ul li{ margin: 8px 0; }
+nav ul li a{ color: white; text-decoration: none; }
+nav ul li a:hover{ text-decoration: underline; }
+
+/* MAIN */
+main{
+  flex: 1; padding: 20px; background-color: #ecf0f1; overflow: auto;
+}
+.content{
+  background: white; padding: 24px; border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  max-width: 1100px; margin: 0 auto;
+}
+
+/* Typography – daha belirgin metin */
+.content h1{
+  margin: 0 0 12px; color: #1f2a37; font-size: 28px; font-weight: 700; letter-spacing: .2px;
+}
+.content h2{
+  margin: 18px 0 8px; color: #1f2a37; font-size: 22px; font-weight: 700;
+}
+.content h3{
+  margin: 16px 0 6px; color: #1f2a37; font-size: 20px; font-weight: 700;
+}
+.content p, .content li{
+  color: #243447; font-size: 18px; line-height: 1.6;
+}
+.content ul{ margin: 8px 0 14px 20px; }
+.back-link{ display:inline-block; margin-bottom:10px; color:#2c3e50; text-decoration:none; font-weight:600; }
+.back-link:hover{ text-decoration:underline; }
+
+/* Görseller – daha küçük ve ortalı */
+.content img{
+  max-width: 72%;
+  height: auto;
+  display: block;
+  margin: 14px auto;       /* üst-alt boşluk + ortalama */
+  border-radius: 4px;      /* hafif köşe yumuşatma */
+}
+
+/* Küçük ekran iyileştirmeleri */
+@media (max-width: 720px){
+  .container{ height: auto; }
+  nav{ width: 200px; }
+  .content{ padding: 18px; }
+  .content h1{ font-size: 24px; }
+  .content h2{ font-size: 20px; }
+  .content h3{ font-size: 18px; }
+  .content p, .content li{ font-size: 17px; }
+  .content img{ max-width: 100%; } /* mobilde tam genişlik */
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <h2><a href="../index2.html" style="color:white; text-decoration:none;">🏠 Hjem</a></h2>
+    <h2>Teknologiforståelse</h2>
+    <ul>
+      <li><a href="cisco.html">Cisco Packet Tracer - Hjem</a></li>
+      <li><a href="brukPacketTracer.html">Bruk av Cisco Packet Tracer</a></li>
+      <li><a href="enkel_nettverksoppsett.html">Opprette et nettverk i Packet Tracer</a></li>
+      <li><a href="../tekfor.html">Tilbake til Teknologiforståelse</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content">
+      <h1>Bruk av Cisco Packet Tracer</h1>
+
+      <p>Med Cisco Packet Tracer kan du lage nettverkstopologier og forberede detaljerte prosjekter, eller bygge en virtuell modell av ditt eksisterende nettverk med denne programvaren.</p>
+      <p>Forbereder du deg til Cisco-eksamener, kan du bruke denne simuleringsprogramvaren til å øve på alle temaene i pensum, som for eksempel rutingsprotokoller og VLAN.</p>
+
+      <h2 id="jump-1">Hvordan bruke Cisco Packet Tracer?</h2>
+      <p>Når du har installert Packet Tracer på Windows, Linux eller Apples Mac, kan du begynne å forberede deg til Cisco-eksamener ved å lage en nettverkstopologi.</p>
+      <p>Når du forbereder deg, er det lurt å lære både verktøy- og enhetsmenyene og tegneverktøyene, slik at du kan lage et mer forklarende prosjekt.</p>
+      <p>Å bare legge til en ruter og en svitsj i topologien gjør prosjektet vanskelig å lese. Derfor vil det hjelpe andre å forstå prosjektet bedre hvis du legger til notater som IP-adresser og andre innstillinger på enhetene.</p>
+      <p>Du kan legge til sluttenheter som stasjonær PC, bærbar PC og server i arbeidsområdet og opprette nettverkstilkoblinger mellom dem.</p>
+      <p>Følg trinnene nedenfor i rekkefølge for bruk av Packet Tracer for nybegynnere.</p>
+
+      <h3 id="jump-2">Trinn 1: Legge til datamaskin</h3>
+      <p>Den enkleste og mest grunnleggende oppgaven i Packet Tracer er å legge til en datamaskin (PC) i arbeidsområdet. Klikk på delen [End Devices – Sluttenheter].</p>
+      <p><img alt="Bilgisayar Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-01.webp" /></p>
+      <p>I området som åpnes til høyre, dra ikonet for stasjonær PC inn i arbeidsområdet og slipp det der.</p>
+      <p><img alt="PC Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-02.webp" /></p>
+      <p>Etter at du har lagt til en PC, dobbeltklikker du for å åpne vinduet for maskinvareinnstillinger. I dette vinduet kan du legge til moduler fra venstre side, og du kan slå PC-en av eller på fra det markerte området.</p>
+      <p><img alt="Bilgisayar Donanımını İnceleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-03.webp" /></p>
+
+      <h3 id="jump-3">Trinn 2: Tilordne IP-adresser til PC-er</h3>
+      <p>Du må tilordne IP-adresser, subnettmasker og standard gateway-adresser til PC-ene du har lagt til. Klikk for eksempel på PC0 for å konfigurere TCP/IP-innstillingene, gå til fanen Desktop, og klikk på IP Configuration (IP-konfigurasjon).</p>
+      <p><img alt="Bilgisayarlara IP Adresleri Verme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-04.webp" /></p>
+      <p>I IP-konfigurasjonsvinduet kan du gi PC0 en privat IP-adresse og maske. Under trenger du ikke å skrive DNS, men å legge til en gateway gjør det mulig å nå andre nett. I dette eksempelet settes 10.1.1.1 som gateway.</p>
+      <p>Gi PC0 IP-adressen 10.1.1.10 og en maske som 255.0.0.0, og skriv 10.1.1.1 i gateway-feltet.</p>
+      <p><img alt="PC'nin IP Yapılandırması" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-05.webp" /></p>
+      <p>Gi Laptop0 IP-adressen 10.1.1.20 og den samme masken. Bruk 10.1.1.1 som gateway.</p>
+      <p><img alt="IP Yapılandırmasını Kapatma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-06.webp" /></p>
+
+      <p><strong>Trinn 3: Legge til nettverksenheter – ruter og svitsj</strong></p>
+      <p><img alt="PC'de Komut İstemini Açma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-07.webp" /></p>
+      <p>For å legge til en ruter i topologien, klikk på området Routers (Ruter) nederst.</p>
+      <p><img alt="CMD'de ipconfig kullanımı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-08.webp" /></p>
+
+      <h3 id="jump-4">Velg 2811-ruteren for dette enkle eksempelet og klikk på den for å legge den til i arbeidsområdet.</h3>
+      <p>Klikk på Switches (Svitsjer)-kategorien for å legge til en svitsj.</p>
+      <p><img alt="Cisco Switch Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-09.webp" /></p>
+      <p>Velg 2950-24 og klikk for å plassere den i arbeidsområdet.</p>
+      <p><img alt="Ağ Cihazları Ekleme Aracı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-10.webp" /></p>
+
+      <p><strong>Trinn 4: Kabling mellom enhetene</strong></p>
+      <p><img alt="Ağ Cihazını Çalışma Alanına Sürükleyip Bırakma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-11.webp" /></p>
+      <p>For å koble PC0 til Switch0 bruker du koblingsalternativet nederst og velger Copper Straight-Through (rett kabel). Koble fra PC0s FastEthernet0 til Switch0s FastEthernet0/1.</p>
+      <p><img alt="Switch'in Özelliklerini Görüntüleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-12.webp" /></p>
+      <p>Koble Laptop0 til Switch0 ved å velge den samme kabeltypen og koble fra Laptop0 FastEthernet0 til FastEthernet0/2 på Switch0.</p>
+      <p><img alt="Switch'in Fiziksel Görünümü" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-13.webp" /></p>
+      <p>For å koble ruteren til svitsjen bruker du Copper Straight-Through-kabelen. Velg FastEthernet0/0 på ruteren og koble til FastEthernet0/1 på Switch0.</p>
+      <p><img alt="Switch'in FastEthernet Arayüzlerini İnceleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-14.webp" /></p>
+      <p>Når kablene er på plass, må du konfigurere grensesnittet FastEthernet0/0 på ruteren.</p>
+      <p><img alt="CLI Komut İstemi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-15.webp" /></p>
+
+      <h3 id="jump-5">Trinn 5: Konfigurere rutergrensesnitt</h3>
+      <p>Klikk på ruteren for å åpne konfigurasjonsvinduet.</p>
+      <p>I vinduet klikker du på fanen Config (Konfigurasjon) og deretter på grensesnittet FastEthernet0/0.</p>
+      <p><img alt="Ağ Cihazlarını Kablolama" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-17.webp" /></p>
+      <p>For å gi grensesnittet en IP-adresse skriver du 10.1.1.1 og masken 255.0.0.0. Aktiver grensesnittet ved å krysse av for On.</p>
+      <p><img alt="FastEthernet0 Arayüzünü Seçme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-18.webp" /></p>
+      <p>Etter at du har gitt IP-adressen, klikker du på On ved siden av Port Status for å aktivere porten.</p>
+      <p><img alt="FastEthernet0/1 Arayüzünü Seçme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-19.webp" /></p>
+
+      <p><strong>Ping mellom to enheter: PC0 ↔ Laptop0</strong></p>
+      <p><img alt="Bilgisayar'ın Switch'e Bağlantısı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-20.webp" /></p>
+      <p>For å teste kommunikasjonen mellom PC0 og Laptop0, klikk på fanen Desktop på PC0 og deretter på Command Prompt (Kommandolinje).</p>
+      <p><img alt="Laptop Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-21.webp" /></p>
+      <p>Skriv kommandoen ping 10.1.1.10 fra PC0 og vent på svar. Hvis du får svar (Reply), er kommunikasjonen vellykket.</p>
+      <p><img alt="Laptop'u Switch'e Bağlama" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-22.webp" /></p>
+      <p>Det at ping er vellykket viser at PC-ene kan kommunisere i samme nett.</p>
+      <p><img alt="Laptop'un TCP/IP Ayarlarını Yapılandırma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-23.webp" /></p>
+
+      <h3 id="jump-6">Bruk også PC0 til å pinge Laptop0s IP 10.1.1.20 for å bekrefte at tilkoblingen fungerer begge veier.</h3>
+      <p><strong>Trinn 6: Enkel Ping-test i Packet Tracer GUI</strong></p>
+      <p><img alt="Bilgisayarlar Arasında Ping Testi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-24.webp" /></p>
+      <p>Du kan også sende en ping ved hjelp av GUI. Klikk på fanen Simulation (Simulering) nederst i høyre hjørne.</p>
+      <p><img alt="Ping İşlemi Başarılı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-25.webp" /></p>
+      <p>I verktøylinjen ser du ikonet Add Simple PDU (legg til enkel PDU). Klikk på dette for å sende en ping mellom to enheter.</p>
+      <p><img alt="PC0'dan Laptop'a Ping Atma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-26.webp" /></p>
+      <p>For å sende ping fra PC0 til Laptop0, klikk først på kuverten og deretter på PC0 i arbeidsområdet.</p>
+      <p><img alt="Packet Tracer Realtime Menüsünü Açma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-27.webp" /></p>
+      <p>Klikk én gang på PC0 og deretter på Laptop0 for å bestemme retningen og starte ping.</p>
+      <p><img alt="Çalışma Alanında Add Simple PDU Kullanımı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-28.webp" /></p>
+      <p>Etter at du har sluppet kuverten på Laptop0, bytt til fanen Realtime og se statusen. Meldingen Successful betyr at pingen lyktes.</p>
+
+      <p><strong>Trinn 6: Legge til trådløs ruter (Wireless Router)</strong></p>
+      <p><img alt="PC'den Laptop'a PDU Paketi Gönderme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-29.webp" /></p>
+      <p>For å legge til en trådløs ruter i arbeidsområdet, klikk på området Wireless Devices (Trådløse enheter) nederst.</p>
+      <p><img alt="ICMP Paketini İnceleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-30.webp" /></p>
+
+      <h3 id="jump-7">Fra de tilgjengelige trådløse enhetene velger du WRT300N og klikker for å legge den til.</h3>
+      <p>Når den trådløse ruteren er aktiv, er det nok å klikke et tomt område for å plassere den i arbeidsområdet.</p>
+      <p><img alt="Packet Tracer'da Wireless Router Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-31.webp" /></p>
+      <p>Når WRT300N er lagt til, klikker du én gang på den.</p>
+      <p><img alt="Kablosuz Modemi Çalışma Alanına Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-32.webp" /></p>
+      <p>For å koble den trådløse ruteren til Switch0, velg koblingsalternativet nederst, velg Copper Straight-Through, og koble Ethernet-porten til Switch0s GigabitEthernet0/1.</p>
+      <p><img alt="WRT300N Kablosuz Modemi Yapılandırma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-33.webp" /></p>
+      <p>Klikk deretter på den trådløse ruteren og velg Ethernet1-porten.</p>
+      <p><img alt="WRT300N Kablosuz Modemi Switch'e Bağlama" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-34.webp" /></p>
+      <p>Etter at du har koblet den trådløse ruteren til Switch0, klikker du på fanen GUI i enhetens egenskaper.</p>
+      <p><img alt="Ethernet 1 Portunu Seçme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-35.webp" /></p>
+      <p>For å konfigurere LAN-innstillingene, skriv inn en lokal IP-adresse og aktiver DHCP fra GUI-vinduet.</p>
+      <p><img alt="Wireless Router'ın GUI Arayüzünü Açma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-36.webp" /></p>
+      <p>Ikke lukk vinduet med X; bla nedover i GUI-vinduet.</p>
+      <p><img alt="Kablosuz Router'a Ping Atama" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-37.webp" /></p>
+      <p>Klikk på Save Settings for å lagre innstillingene du har gjort.</p>
+      <p><img alt="GUI Arayüzünü Aşağıya Kaydırma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-38.webp" /></p>
+      <p>Test fra PC0 at du kan pinge den trådløse ruteren for å bekrefte at forbindelsen fungerer.</p>
+      <p><img alt="Ayarları Kaydetme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-39.webp" /></p>
+
+      <p>For å legge til en smarttelefon i topologien, klikk på området End Devices og velg Smart Device Phone.</p>
+      <p><img alt="PC'den Modem'e Ping Atma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-40.webp" /></p>
+      <p>Etter at du har valgt smarttelefonen, klikker du der du vil plassere den.</p>
+      <p><img alt="Packet Tracer'da Smart-Phone (Akıllı Telefon) Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-41.webp" /></p>
+      <p>Så snart smarttelefonen er lagt til, vil den koble seg til den trådløse ruteren automatisk. Årsaken er at DHCP-tjenesten er aktiv på ruteren.</p>
+      <p><img alt="Akıllı Telefonu Çalışma Alanına Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-42.webp" /></p>
+
+      <p><strong>Trinn 7: Legge til notater (Notes) i arbeidsområdet</strong></p>
+      <p><img alt="Smartphone, DHCP'den Bir IP Adresi Alması" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-43.webp" /></p>
+      <p>For å legge til tekst i arbeidsområdet, klikk på Notes fra verktøyene til venstre og velg et tekstområde.</p>
+      <p><img alt="Telefonun Ayarlarını Görüntüleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-44.webp" /></p>
+      <p>Skriv for eksempel Router: 10.1.1.1 i tekstboksen og klikk utenfor for å fullføre.</p>
+      <p><img alt="Telefonun IP Yapılandırması" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-45.webp" /></p>
+      <p>For å legge til en snakkeboble, klikk på snakkeboble-ikonet på verktøylinjen til venstre og velg plassering i arbeidsområdet.</p>
+      <p><img alt="Telefondan Kablosuz Router'a Ping Testi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-46.webp" /></p>
+
+      <h3 id="jump-8">Skriv ønsket tekst i snakkeboblen for å forklare deler av prosjektet.</h3>
+      <p><strong>Trinn 8: Legge til figurer (former)</strong></p>
+      <p>For å legge til en rektangulær form, klikk på Rectangle i venstre verktøylinje og tegn i arbeidsområdet.</p>
+      <p><img alt="Projeye Açıklamalar/Notlar Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-47.webp" /></p>
+      <p>Klikk på enhetene du vil fremheve med rektangelet, og juster plasseringen ved behov.</p>
+      <p><img alt="Açıklama Yazma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-48.webp" /></p>
+      <p>For å legge til en sirkel, klikk på Circle i venstre verktøylinje og marker området du ønsker.</p>
+      <p><img alt="İstemciler İçin IP Adresi Bilgilerinin Not Edilmesi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-49.webp" /></p>
+
+      <h3 id="jump-9">Når du har lagt til formene, kan du flytte dem ved å klikke og dra i arbeidsområdet.</h3>
+      <p><strong>Trinn 9: Fjerne figurer eller enheter fra prosjektet</strong></p>
+      <p><img alt="Packet Tracer'da Şekillerin Kullanımı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-50.webp" /></p>
+      <p>For å fjerne en form eller enhet fra arbeidsområdet, hold markøren over objektet og trykk på Delete-tasten på tastaturet.</p>
+      <ul>
+        <li><strong>1. No Fill</strong></li>
+      </ul>
+      <p>Det er nyttig å lagre prosjektet før du sletter objekter, slik at du kan angre ved behov.</p>
+      <ul>
+        <li><strong>2. Fill Color</strong></li>
+      </ul>
+
+      <p><strong>Trinn 10: Prosjektlagring</strong></p>
+      <p><img alt="Palette Dialog" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-51.webp" /></p>
+      <p>For å lagre prosjektet, klikk på File-menyen og velg Save (Lagre).</p>
+      <p><img alt="Renk Seçimi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-52.webp" /></p>
+      <p>Velg en mappe og et filnavn og bekreft lagring.</p>
+      <p><img alt="Daire Şekli Çizme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-53.webp" /></p>
+      <p>Senere kan du åpne prosjektet fra samme meny med Open (Åpne) og fortsette å jobbe.</p>
+      <p><img alt="Dikdörtgen Ekleme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-54.webp" /></p>
+
+      <h3 id="jump-10">Trinn 11: Ekstra arbeider – flere enheter</h3>
+      <p>Du kan utvide topologien ved å legge til flere enheter som servere, skrivere og flere PC-er.</p>
+      <p><img alt="Şekilleri Yeniden Boyutlandırma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-55.webp" /></p>
+      <p>Gjør de nødvendige tilkoblingene med riktige kabler og konfigurer IP-innstillinger på samme måte som tidligere.</p>
+      <p><img alt="Boyutlandırılacak Şeklin Seçimi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-56.webp" /></p>
+
+      <p><strong>Trinn 12: Tillegg – endre og slette elementer via verktøylinjen</strong></p>
+      <p><img alt="Şekil Yeniden Boyutlandırıldı" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-57.webp" /></p>
+      <p>Noen elementer kan slettes direkte fra venstre verktøylinje ved å velge sletteverktøyet og klikke på objektet.</p>
+      <p><img alt="Anlaşılabilir Bir Ağ Dizaynı Oluşturma" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-58.webp" /></p>
+
+      <h3 id="jump-11">For å praktisere, slett rektangelet eller sirkelen du har lagt til i arbeidsområdet.</h3>
+      <p>Når du velger sletteverktøyet, kan du klikke på objektet én gang for å fjerne det fra prosjektet.</p>
+      <p><img alt="Çalışma Alanındaki Nesneleri Silme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-59.webp" /></p>
+      <p>Du kan også holde markøren over enheten eller formen du vil slette og klikke én gang med venstre museknapp.</p>
+      <p><img alt="Silinecek Şekli Seçme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-60.webp" /></p>
+      <p>Rektangelformen i arbeidsområdet er nå slettet. Gjenta den samme prosedyren for sirkelen.</p>
+      <p><img alt="Dikdörtgen Şeklini Silme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-61.webp" /></p>
+      <p>For å fjerne smarttelefonen som er koblet til den trådløse ruteren, klikker du på den i arbeidsområdet.</p>
+      <p><img alt="Akıllı Telefonu Silme" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-62.webp" /></p>
+      <p>Smarttelefonen ble slettet fra arbeidsområdet uten problemer.</p>
+      <p><img alt="Eklenen Cihazlar Silindi" decoding="async" loading="lazy" src="./Cisco Packet Tracer Kullanımı _ Yeni Başlayanlar İçin!_files/How-to-Use-Cisco-Packet-Tracer-Kullanimi-63.webp" /></p>
+
+      <h3 id="jump-13">Konklusjon</h3>
+      <p>I denne veiledningen har vi sett på hvordan du kan bygge et grunnleggende nettverk med Ciscos nettverkssimulator og hvordan du bruker programvaren.</p>
+
+      <p><a href="https://www.youtube.com/embed/2VL3rjZ_Wmw?si=VC6rVMQY2pCgaN3">Tutorial Video</a></p>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
